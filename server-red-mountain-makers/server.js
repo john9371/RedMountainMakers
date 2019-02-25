@@ -1,89 +1,155 @@
-// this part installs the packages your going to use in the file.
-//var jsonFile = require('jsonfile');
 const express = require('express');
 const path = require('path');
-var bodyParser = require("body-parser");
-var mysql = require('mysql')
-var app = express();
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'BeGre@t2019',
-    database: 'makers_db'
+var mysql = require('mysql');
+const router = express.Router();
+
+/****************
+ * MySQL CONNECT
+****************/
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "InnovateBham2019",
+    database: "InnovBhamDB"
 });
-connection.connect()
-app.get("/user/all", function (req, res) {
-    var sql = "select * from user";
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
-            res.send(rows);
+
+con.connect(function (err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
+
+/****************
+ * API ROUTING
+****************/
+    /************
+     * CREATE
+    ************/
+    //Create User
+    router.post("/users/:username", function (req, res) {
+        con.query("INSERT INTO Users (username) VALUES (?)", [req.params.username], (err, rows, fields) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.send(rows);
+            }
+        });
+    });
+    //Create Chirp
+    router.post("/chirps/:uid/:text", function (req, res) {
+        con.query("INSERT INTO Chirps (userid, text) VALUES (?, ?)", [req.params.uid, req.params.text], (err, rows, fields) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.send(rows);
+            }
+        });
+    });
+
+    /************
+     * READ
+    ************/
+    /************
+     * USERS
+    ************/
+    //All users
+    router.get('/users', function (req, res) {
+        con.query('SELECT * FROM Users', (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.get("/user/id", function (req, res) {
-    var sql = "select * from users where id like "+ req;
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
-            res.send(rows);
+    });
+    //Specific user
+    router.get('/users/:id', function (req, res) {
+        con.query('SELECT * FROM Users WHERE id = ?', [req.params.id], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.get("/chirps/all", function (req, res) {
-    var sql = "select * from Chirps";
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
-            res.send(rows);
+    });
+    /************
+     * CHIRPS
+    ************/
+    //All chirps
+    router.get('/chirps', function (req, res) {
+        con.query('SELECT * FROM Chirps', (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.get("/chirps/userid", function (req, res) {
-    var sql = "select * from chirps where userid like " + req;
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
-            res.send(rows);
+    });
+    //All chirps of User
+    router.get('/chirps/:uid', function (req, res) {
+        con.query('SELECT * FROM Chirps WHERE UID = ?', [req.parans.uid], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.delete("/deleteUser/id", function (req, res) {
-    var sql = "delete from user where id like " + req;
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
+    });
+
+    /************
+     * UPDATE
+    ************/
+    //Update User
+    router.put('/users/:id/:name', function (req, res) {
+        con.query('UPDATE Chirps SET username = ? WHERE id = ?', [req.params.name, req.params.id], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.delete("/deleteChirp/id", function (req, res) {
-    var sql = "delete from chirps where id like " + req;
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
+    });
+
+    /************
+     * DELETE
+    ************/
+    //Specific user
+    router.delete('/users/:id', function (req, res) {
+        con.query('DELETE FROM Users WHERE id = ?', [req.params.id], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.update("/user/update", function (req, res) {
-    var sql = ""
-    if(req.id != null){
-    sql += "update user where id like " + req.id;
-    }
-    if(req.name != null){
-    sql += "update user where name like '" + req.name +"';";
-    }
-    if(req.email != null){
-    sql += "update user where email like '" + req.email+ "';";
-    }
-    if(req.password != null){
-    sql += "update user where password like " + req.password+"';";
-    }
-    connection.query(sql, function (err, rows, fields) {
-            if (err) throw err
+    });
+    //Specific Chirp
+    router.delete('/chirps/:id', function (req, res) {
+        con.query('DELETE FROM Chirps WHERE id = ?', [req.params.id], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
         })
-});
-app.post("/user/create", function(req){
-    var sql = "insert into user (name, email, password) variables ('" + req.name + "', '" + req.email + "', '" + req.password + "');"
-    connection.query(sql, function (err, rows, fields) {
-        if (err) throw err
-    })
-})
-app.post("/chirp/create", function(req){
-    var sql = "insert into chirps (userid, text, location) variables ('" + req.userid + "', '" + req.text + "', '" + req.location + "');"
-    connection.query(sql, function (err, rows, fields) {
-        if (err) throw err
-    })
-})
-connection.end();
-// this is express listening for activity on the port 3000. When it connects to this port,
-// the function is called and it console.logs('Server listening on port 3000').
-app.listen(8000);
-console.log('Server listening on port 8000');
+    });
+    //All Chirps of User
+    router.delete('/chirps/:uid', function (req, res) {
+        con.query('DELETE FROM Chirps WHERE userid = ?', [req.params.uid], (err, rows, fields) => {
+            if (err) {
+                console.log(err)
+            }
+            else {
+                res.send(rows);
+            }
+        })
+    });
+module.exports = router;
