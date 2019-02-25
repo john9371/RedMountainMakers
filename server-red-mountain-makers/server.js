@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'BeGre@t2019',
-    database: 'chirpr'
+    database: 'makers_db'
 });
 connection.connect()
 app.get("/user/all", function (req, res) {
