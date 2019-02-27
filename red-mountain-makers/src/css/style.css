@@ -19,3 +19,28 @@
   background-size: cover;
 } */
 
+.logo {
+  display:block;
+  margin:auto;
+}
+
+.other {
+  text-align: center;
+}
+
+.glass {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+
+.banner {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+#download-button {
+  border: 1px solid red;
+}
