@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import './css/materialize.css'
 var classes;
-
+var tokenReq = {
+    host: "eventbriteapi.com",
+    path: "/v3/users/me/?token=GS3SVXQ6SKYYRQXFQL36",
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer token"
+    }
+};
 class App extends Component {
     render() {
-        fetch("https://eventbrite.com/v3/organizations/13587733967/events/" + this.props.match.params.id)
-            .then((response) => {
-                return response.json();
-            })
-            .then((film) => {
-                this.setState({ classes })
-            });
         return (
 
 
@@ -33,7 +34,7 @@ class App extends Component {
                         <a href="#" data-target="nav-mobile" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                     </nav>
                 </div>
-
+                <link src = "">eventBriteFuckery</link>
                 <br></br>
                 <h3>Classes at the Space</h3>
                 <div id="content" className="page-wrap">
