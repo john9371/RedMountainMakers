@@ -1,20 +1,23 @@
-body {
-    background-color: bisque
+body{
+    background-color: bisque;
 }
+
 .top {
-   height: 10%;
-   width: 50%;
+   height: 60%;
+   width: 100%;
+   
 }
 h1 {
-    padding: 30;
+    padding: 3px;
     text-align: center;
     color: black;
     font-size: 20px;
+    margin: 20px;
     
 }
 
 h2 {
-    font: 1em times;
+    font: 25px;
     color: red;
     padding: 10px;
 
@@ -52,7 +55,7 @@ ul {
     }
     
     li {
-    float: left;
+    float: right;
     }
     
     li a {
@@ -66,3 +69,46 @@ ul {
     li a:hover {
     background-color: #111;
     }
+    /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: red;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color:grey;
+    padding: 20px;
+  }
+
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3rem;
+    background-color: black;
+    text-align: center;
+  }

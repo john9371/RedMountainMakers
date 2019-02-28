@@ -8,53 +8,64 @@
     <link rel="stylesheet" href="./contact.css" type="text/css">
 </head>
 
+<ul>
+    
+ <li><a href="#Donate">Donate</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#Our Supporters">Our Supporters</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a class="active" href="#home">Home</a></li>
+</ul>
+<div>
+    <h1>Contact Us</h1>
+</div>
 
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#Donate">Donate</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#membership">Membership</a></li>
-        <li><a href="#">Membership</a></li>
 
-    </ul>
+<body>
+    <div class="top">
+        <img src="glass.jpg"><br>
+    </div>
+   
 
-    <body>
-        <div class="top">
-            <img src="https://pbs.twimg.com/profile_images/966722989470318593/D_ofw0lt_400x400.jpg"><h1>Contact Us</h1>
-        </div>
-      
+    <h2>Red Mountain Makers<br>
+        Birmingham Alabama’s DIY tech co-operative and makerspace.<br>
+        Come make marvelous things with us!<br>
+        5502 1st Avenue North,<br>
+        Birmingham Alabama 35212<br>
+        United States<br>
+    </h2>
+    <h3>Go For It!!</h3>
 
-        <h2>Red Mountain Makers<br>
-            Birmingham Alabama’s DIY tech co-operative and makerspace.<br>
-            Come make marvelous things with us!<br>
-            5502 1st Avenue North,<br>
-            Birmingham Alabama 35212<br>
-            United States<br>
-        </h2>
-        <div id="after_submit"></div>
-        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-            <div class="row1">
-                <label class="required" for="name">Your name:</label><br />
-                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-                <span id="name_validation" class="error_message"></span>
-            </div>
-            <div class="row2">
-                <label class="required" for="email">Your email:</label><br />
-                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-                <span id="email_validation" class="error_message"></span>
-            </div>
-            <div class="row3">
-                <label class="required" for="message">Your message:</label><br />
-                <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-                <span id="message_validation" class="error_message"></span>
-            </div>
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-            <input id="submit_button" type="submit" value="Send email" />
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">State</label>
+            <select id="state" name="state">
+                <option value="australia">Alabama</option>
+                <option value="canada">Florida</option>
+                <option value="usa">Texas</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
         </form>
-        <div class="pic">
-            <img src="https://pbs.twimg.com/profile_images/378800000694935995/6e8ecf3247238128294f42208cd20aaa_400x400.jpeg">
-        </div>
-        <script src="apps.js"></script>
-    </body>
+    </div>
+
+</body>
+
+</html>
+<div class="pic">
+    <img src="RedMountainMakersLogo.png">
+</div>
+<script src="apps.js"></script>
+</body>
 
 </html>

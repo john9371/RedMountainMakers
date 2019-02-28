@@ -1,0 +1,46 @@
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.banner {
+  /* background-image: url("https://i1.wp.com/78.media.tumblr.com/e78cb073febe20f8540b225579ccda84/tumblr_inline_p3yy45ej7w1tt4awm_1280.jpg?resize=605%2C254&ssl=1"); 
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: lightgray;
+}
+
+/* .backgroundImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.logo {
+  display:block;
+  margin:auto;
+}
+
+.other {
+  text-align: center;
+}
+
+.glass {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+
+.banner {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+#download-button {
+  border: 1px solid red;
+}
