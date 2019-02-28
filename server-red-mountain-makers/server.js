@@ -45,66 +45,8 @@ router.post("/admin/class/:class_id/:name/:day/:time/:non_member_cost/:member_co
  * USERS
 ************/
 //All Classes
-router.get('/users', function (req, res) {
-    con.query('SELECT * FROM Classes', (err, rows, fields) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            res.send(rows);
-        }
-    })
-});
-//Specific user
-router.get('/users/:id', function (req, res) {
-    con.query('SELECT * FROM Users WHERE id = ?', [req.params.id], (err, rows, fields) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            res.send(rows);
-        }
-    })
-});
-/************
- * CHIRPS
-************/
-//All chirps
-router.get('/chirps', function (req, res) {
-    con.query('SELECT * FROM Chirps', (err, rows, fields) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            res.send(rows);
-        }
-    })
-});
-//All chirps of User
-router.get('/chirps/:uid', function (req, res) {
-    con.query('SELECT * FROM Chirps WHERE UID = ?', [req.parans.uid], (err, rows, fields) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            res.send(rows);
-        }
-    })
-});
-
-/************
- * UPDATE
-************/
-//Update User
-router.put('/users/:id/:name', function (req, res) {
-    con.query('UPDATE Chirps SET username = ? WHERE id = ?', [req.params.name, req.params.id], (err, rows, fields) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            res.send(rows);
-        }
-    })
+router.get('/classes', function (req, res) {
+    
 });
 
 /************
