@@ -46,7 +46,9 @@ router.post("/admin/class/:class_id/:name/:day/:time/:non_member_cost/:member_co
 ************/
 //All Classes
 router.get('/classes', function (req, res) {
-    
+    request({
+        uri: eventbrite.com/oauth/authorize
+    }).pipe(res)
 });
 
 /************
