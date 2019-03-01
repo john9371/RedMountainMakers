@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import bcrypt from 'bcryptjs'
 
 
 class Login extends Component {
