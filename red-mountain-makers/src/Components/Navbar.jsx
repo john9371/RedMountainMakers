@@ -12,7 +12,7 @@ function Navbar() {
                                 <li><a className="black-text text-darken-2" href="#">Classes We Offer</a></li>
                                 <li><a className="black-text text-darken-2" href="#">Membership</a></li>
                                 <li><a className="black-text text-darken-2" href="#">Donate</a></li>
-                                <li><a className="black-text text-darken-2" href="#">Contact</a></li>
+                                <li><a className="black-text text-darken-2" href="http://localhost:3000/contact">Contact</a></li>
                             </ul>
                         </div>
                         <ul id="nav-mobile" className="sidenav">

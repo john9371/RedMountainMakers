@@ -6,6 +6,7 @@ import Classes from './Components/Classes'
 // import Membership from './'
 import Contact from './Components/Contact'
 // import Supporters from './'
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Login from './Components/Login'
 
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
