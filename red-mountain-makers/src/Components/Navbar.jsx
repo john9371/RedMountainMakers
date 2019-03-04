@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import M from 'materialize-css';
 
 
 function Navbar() {
