@@ -7,7 +7,7 @@ const router = express.Router();
 ****************/
 //var eventKey = FHLUZYFIPS7BLMZVXO
 var con = mysql.createConnection({
-    host: "172.16.21.56:8000",
+    host: "localhost",
     user: "root",
     password: "BeGre@t2019",
     database: "makers_db"
