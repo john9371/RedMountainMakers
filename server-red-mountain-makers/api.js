@@ -7,7 +7,7 @@ const router = express.Router();
 ****************/
 //var eventKey = FHLUZYFIPS7BLMZVXO
 var con = mysql.createConnection({
-    host: "localhost",
+    host: "172.16.21.56:8000",
     user: "root",
     password: "BeGre@t2019",
     database: "makers_db"
@@ -71,7 +71,7 @@ router.get("/paymentHistory/:member_id", function (req, res) {
     }
 });
 //Create User
-router.post("/users/:id:name:password:email:status:lastpaydate", function (req, res) {
+router.post("/users/:id/:name/:password/:email/:status/:lastpaydate", function (req, res) {
     con.query("INSERT INTO Member (name) VALUES (?, ?, ?, ?, ?, ?, ?)", [req.params.id, req.params.name, req.params.email, req.params.password, req.params.status, false, req.params.lastpaydate], (err, rows, fields) => {
         if (err) {
             console.log(err);
@@ -95,7 +95,7 @@ router.get("/users/:id", function (req, res){
 });
 
 //Login User
-router.post("/users/:username:password", function(req, res){
+router.post("/users/:username/:password", function(req, res){
     con.query("SELECT * FROM Member WHERE (password) = ? AND (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
@@ -107,7 +107,7 @@ router.post("/users/:username:password", function(req, res){
 });
 
 //Change User Password
-router.post("/users/:username:password", function(req, res){
+router.put("/users/:username/:password", function(req, res){
     con.query("UPDATE Member SET (password) = ?  WHERE (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
@@ -119,7 +119,7 @@ router.post("/users/:username:password", function(req, res){
 });
 
 //Add Status
-router.post("/status/:id:name:price", function(req, res){
+router.post("/status/:id/:name/:price", function(req, res){
     con.query("INSERT INTO Member_Status (id, membership_type, cost) VALUES  (?, ?, ?)", [req.params.id, req.params.name, req.params.price], (err, rows, fields)=>{
         if (err){
             console.log(err);
@@ -131,7 +131,7 @@ router.post("/status/:id:name:price", function(req, res){
 });
 
 //Edit Status
-router.post("/status/:id:price", function(req, res){
+router.post("/status/:id/:price", function(req, res){
     con.query("UPDATE Member_Status SET (cost) VALUES  (?)", [req.params.id], (err, rows, fields)=>{
         if (err){
             console.log(err);
