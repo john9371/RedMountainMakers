@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import './css/materialize.css'
+import '../css/App.css';
+import '../css/materialize.css'
 var classes;
 var tokenReq = {
     host: "eventbriteapi.com",
