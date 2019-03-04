@@ -1,0 +1,9 @@
+{
+    "name": "red-mountain-makers",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "express": "^16.8.3",
+      "mysql": "^16.8.3"
+    }
+}
