@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
+import Home from './Components/Home'
+//import Footer from './Components/Footer'
+import Classes from './Components/Classes'
+// import Membership from './'
 import Contact from './Components/Contact'
-import Home from './Components/Home.js'
-import Footer from './Components/footer'
+// import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import Login from './Components/Login'
-import './App.css';
+//import Login from './Components/Login'
+
 
 class App extends Component {
   render() {
     return (
-      <>
-        {/* <Login /> */}
-        <Navbar />
-        <Switch>
-          <Route exact path="/contact" component={Contact} />
-          <Route path="/people/" component={people} />
-          <Route exact path="/films/:id" component={exfilm} />
-        </Switch>
-        <Footer /> 
-      </>
+      <Router>
+        <>
+          <Navbar />
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/Classes" component={Classes}/>
+              {/* <Route exact path="/Membership" Component={Membership}/> */}
+              <Route exact path="/Contact" component={Contact}/>
+              {/* <Route exact path="/Supporters" Component={Supporters}/> */}
+
+            </Switch>
+          {/* <Footer />   */}
+        </>
+      </Router>
     );
   }
 }
