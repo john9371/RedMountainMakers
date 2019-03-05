@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Image from './RedMountainMakersLogo.png'
-// import Style from '../css/style.css'
+ import Style from '../css/style.css'
 
 class Home extends Component {
   render() {
