@@ -7,15 +7,8 @@ import Classes from './Components/Classes'
 import Contact from './Components/Contact'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-<<<<<<< HEAD
 import Login from './Components/Login'
 import './css/App.css';
-=======
-//import Login from './Components/Login'
-import './css/App.css';
-
-
->>>>>>> 4d63487166c5a973a7ffb79775f329b1e9d84632
 
 class App extends Component {
   render() {
