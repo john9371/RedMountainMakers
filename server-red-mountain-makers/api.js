@@ -95,13 +95,13 @@ router.get("/users/:id", function (req, res){
 });
 
 //Login User
-router.post("/users/:username/:password",function(req, res){
-    con.query("SELECT * FROM Member WHERE (password) = ? AND (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
+router.post("/users/:username",function(req, res){
+    con.query("SELECT * FROM Member WHERE (email) = ?", [req.params.username], (err, row, fields)=>{
         if (err){
             console.log(err);
         }
         else{
-            res.send(rows);
+            res.send(row.password);
         }  
     })
 })

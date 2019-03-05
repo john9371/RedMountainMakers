@@ -1,49 +1,50 @@
 import React, { Component } from 'react'
-import bcrypt from 'bcrypt'
-import { get } from 'http';
+import bcrypt from 'bcryptjs'
+// import { get } from 'http';
 
 
 class Login extends Component {
     constructor(props) {
         super(props)
-        state:
-        email: ""
-        password: ""
+        this.state = {
+            email: "",
+            password: ""
+        };
+        // this.handleEmailChange = this.handleEmailChange.bind(this);
+        // this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        // this.handleLogin = this.handleLogin.bind(this);
     }
 
 
-    handleLogin(event) {
-        postMessage ("172.16.21.56/users/10")
-            .then((response) => {
-                return response.json();
-            })
-            .then((obj) => {
-                this.setState({"films": obj})
-            }
-            );
-        bcrypt.compare(this.state.password, hash, function(err, res) {
-            // res === true
-        });
-        // bcrypt.genSalt(10, function (err, salt) {
-        //     bcrypt.hash(this.state.password, salt, function (err, hash) {
-        //         // Store hash in your password DB.
+    handleLogin = (event) => {
+        // let hashed = "";
+        // fetch(`172.16.21.56/users/7`)
+        //     .then((response) => {
+        //         hashed = response;
         //     });
+        // bcrypt.compare(this.state.password, hashed, function (err, res) {
+        //     // res === true
         // });
+        bcrypt.genSalt(10, function (err, salt) {
+            bcrypt.hash(this.state.password, salt, function (err, hash) {
+                fetch(`172.16.21.56/users/${this.state.email}/${hash}`)
+            });
+        });
     }
 
-    handleEmailChange(e) {
+    handleEmailChange = (e) => {
         this.setState({ email: e.target.value });
     }
 
-    handlePasswordChange(e) {
+    handlePasswordChange = (e) => {
         this.setState({ password: e.target.value });
     }
     render() {
 
         return (
             <form>
-                <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} />
-                <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange} />
+                <input type="text" name="email" placeholder="Email" onChange={this.handleEmailChange} />
+                <input type="password" name="password" placeholder="Password" onChange={this.handlePasswordChange} />
                 <button type="button" onClick={this.handleLogin}>Login</button>
             </form>);
     }
