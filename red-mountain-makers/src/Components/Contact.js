@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Image from './RedMountainMakersLogo.png'
+import Image from '../assets/RMMLogo.png'
 
 
 
@@ -19,17 +19,18 @@ export default class Contact extends Component {
                 <div className="container">
                     <form action="/action_page.php">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+                        <input type="text" id="fname" name="firstname" placeholder="Your first Name.." />
 
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
-
-                        <label for="state">State</label>
-                        <select id="state" name="state">
+                        
+                        <label for="State">State</label>
+                        <input type="text" id="state" name="state" placeholder="Your State.." /><select id="state" name="state">
+                        <input type="text" id="state" name="state" placeholder="State.." />
                             <option value="alabama">Alabama</option>
                             <option value="florida">Florida</option>
                             <option value="texas">Texas</option>
-                        </select>
+                            </select>
 
                         <label for="subject">Subject</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>

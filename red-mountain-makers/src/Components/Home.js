@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 
-import Image from './RedMountainMakersLogo.png'
+import Image from '../assets/RMMLogo.png'
 import Style from '../css/style.css'
+import Image2 from '../assets/robots.jpg'
 
 
 
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <>
         <div className="banner">
-          <img className="logo" src={Image}/>
+          <img className="logo" src={Image} />
           <div className="section no-pad-bot" id="index-banner">
             <div className="container">
               <div className="row center">
@@ -27,9 +28,6 @@ export default class Home extends Component {
 
         <div className="container" >
           <div className="section" >
-
-
-            <hr />
             <div className="row">
               <div className="col s12 m4">
                 <div className="icon-block">
@@ -61,7 +59,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <hr /> <br /> <br />
+        <br /> <br />
         <div>
           <div className="black darken-2">
             <br />
@@ -75,7 +73,7 @@ export default class Home extends Component {
                   <h2 className="center #d50000 red-text"><i className="material-icons">business</i></h2>
                   <h5 className="center white-text">Room Rentals</h5>
                   <p className="light center white-text">Rent your own personal room. You can decorate and store your projects in your rented rooms here at Red Mountain Makers. Rest assured, your stuff is safe with us!</p>
-                  <br /><br />
+                  <br /><br /><br />
                 </div>
               </div>
 
@@ -84,6 +82,7 @@ export default class Home extends Component {
                   <h2 className="center #d50000 red-text"><i className="material-icons">content_cut</i></h2>
                   <h5 className="center white-text">Hack Friendly</h5>
                   <p className="light center white-text">We have a hack zone full of parts ready to be dismembered and re-purposed! We take in all kinds of technological based donations! Plus We love open source ideas and work!</p>
+                  <br />
                 </div>
               </div>
 
@@ -99,9 +98,10 @@ export default class Home extends Component {
 
           <br /><br />
         </div>
-      </div>
-        )
-      }
-    }
-    
-    
+      </>
+    )
+  }
+}
+
+
+
