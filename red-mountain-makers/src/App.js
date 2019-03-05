@@ -7,8 +7,8 @@ import Classes from './Components/Classes'
 import Contact from './Components/Contact'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-//import Login from './Components/Login'
-
+import Login from './Components/Login'
+import './css/App.css';
 
 class App extends Component {
   render() {
@@ -19,9 +19,9 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/Classes" component={Classes}/>
-              {/* <Route exact path="/Membership" Component={Membership}/> */}
+              {/* <Route exact path="/Membership" component={Membership}/> */}
               <Route exact path="/Contact" component={Contact}/>
-              {/* <Route exact path="/Supporters" Component={Supporters}/> */}
+              {/* <Route exact path="/Supporters" component={Supporters}/> */}
 
             </Switch>
           {/* <Footer />   */}
