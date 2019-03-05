@@ -7,11 +7,7 @@ import Classes from './Components/Classes'
 import Contact from './Components/Contact'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-<<<<<<< HEAD
 //import Login from './Components/Login'
-=======
-// import Login from './Components/Login'
->>>>>>> 63b4ccd626b05cca11734aa59ae628cba881fdc6
 import './css/App.css';
 //import Login from './Components/Login'
 
