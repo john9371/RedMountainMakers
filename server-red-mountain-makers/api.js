@@ -94,8 +94,9 @@ router.get("/users/:id", function (req, res){
     })
 });
 
-//Login User
-router.post("/users/:username/:password", function(req, res){
+//Login User && Change User Password
+express.route("/users/:username/:password")
+.post(function(req, res){
     con.query("SELECT * FROM Member WHERE (password) = ? AND (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
@@ -104,10 +105,8 @@ router.post("/users/:username/:password", function(req, res){
             res.send(rows);
         }  
     })
-});
-
-//Change User Password
-router.put("/users/:username/:password", function(req, res){
+})
+.put(function(req, res){
     con.query("UPDATE Member SET (password) = ?  WHERE (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
