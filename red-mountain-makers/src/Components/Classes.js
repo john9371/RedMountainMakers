@@ -447,24 +447,6 @@ class App extends Component {
     render() {
         return (
             <div>
-<<<<<<< HEAD
-                <body>
-
-                    <h3>Classes at the Space</h3>
-                    <div id="content" className="page-wrap">
-                        <li><a className="black-text text-darken-2" href="#"> Tool Training: WoodShop 101</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: Learn to Wield</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Printers</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Modeling</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Programming and Hardware</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Fibers!</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Bike Technology</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Wearable Technology</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Ceramics</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Cosplay!</a></li>
-                    </div>
-                </body>
-=======
                 <h3>Classes at the Space</h3>
                 <div className="page-wrap">
                     {this.state.people.events.map(v => {
@@ -474,7 +456,6 @@ class App extends Component {
                         </div>)
                     })}
                 </div>
->>>>>>> 63b4ccd626b05cca11734aa59ae628cba881fdc6
             </div>
         );
     }
