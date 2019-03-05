@@ -12,6 +12,21 @@ var tokenReq = {
     }
 };
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            people: []
+        };
+    }
+    componentDidMount() {
+        fetch("eventbriteapi.com/v3/users/13587733967/?token=FHLUZYFIPS7BLMZVXO")
+            .then((response) => {
+                return response.json();
+            })
+            .then((people) => {
+                this.setState({people})
+            });
+    }
     render() {
         return (
 
@@ -38,16 +53,9 @@ class App extends Component {
                 <br></br>
                 <h3>Classes at the Space</h3>
                 <div id="content" className="page-wrap">
-                    <li><a className="black-text text-darken-2" href="#"> Tool Training: WoodShop 101</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Tool Training: Learn to Wield</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Printers</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Modeling</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Programming and Hardware</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Fibers!</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Bike Technology</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Wearable Technology</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Ceramics</a></li>
-                    <li><a className="black-text text-darken-2" href="#">Cosplay!</a></li>
+                    {this.state.people.map(v =>{
+                    <li><a className="black-text text-darken-2" href="#">{v}</a></li>
+                    })}
                 </div>
             </body>
         );

@@ -13,7 +13,11 @@ class App extends Component {
       <>
         {/* <Login /> */}
         <Navbar />
-        <Home />
+        <Switch>
+          <Route exact path="/contact" component={Contact} />
+          <Route path="/people/" component={people} />
+          <Route exact path="/films/:id" component={exfilm} />
+        </Switch>
         <Footer /> 
       </>
     );
