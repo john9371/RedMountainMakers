@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import Image from './RedMountainMakersLogo.png'
-// import Style from '../css/style.css'
 
-class Home extends Component {
+import Image from './RedMountainMakersLogo.png'
+import Style from '../css/style.css'
+
+
+
+export default class Home extends Component {
   render() {
     return (
       <div>
         <div className="banner">
-          <img className="logo" src={Image} style={{}}/>
+          <img className="logo" src={Image}/>
           <div className="section no-pad-bot" id="index-banner">
             <div className="container">
               <div className="row center">
@@ -102,4 +105,3 @@ class Home extends Component {
     }
     
     
-export default Home;
