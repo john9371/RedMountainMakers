@@ -107,7 +107,7 @@ express.route("/users/:username/:password")
     })
 })
 .put(function(req, res){
-    con.query("UPDATE Member SET (password) = ?  WHERE (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
+    con.query("UPDATE Member SET password = ?  WHERE email = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
         }
