@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Image from './RedMountainMakersLogo.png'
+import Image from '../assets/RMMLogo.png'
 
 
 
