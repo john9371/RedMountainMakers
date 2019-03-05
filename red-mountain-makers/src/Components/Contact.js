@@ -24,11 +24,11 @@ export default class Contact extends Component {
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
-                        <label for="country">State</label>
+                        <label for="state">State</label>
                         <select id="state" name="state">
-                            <option value="australia">Alabama</option>
-                            <option value="canada">Florida</option>
-                            <option value="usa">Texas</option>
+                            <option value="alabama">Alabama</option>
+                            <option value="florida">Florida</option>
+                            <option value="texas">Texas</option>
                         </select>
 
                         <label for="subject">Subject</label>
