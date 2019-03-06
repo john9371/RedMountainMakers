@@ -8,6 +8,7 @@ import Contact from './Components/Contact'
 //import Admin from './Components/Admin'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+//import Login from './Components/Login'
 import './css/App.css';
 import Login from './Components/Login'
 
