@@ -3,8 +3,7 @@ import Image from './RedMountainMakersLogo.png'
 import Style from '../css/style.css'
 import AllUsersFunction from './Functions/AdminUsers.js'
 const cors = require('cors')
-var app = express()
-app.use(cors())
+
 
 export default class Home extends Component {
 
@@ -22,7 +21,7 @@ export default class Home extends Component {
     }
 
         render() {
-            const  users  = this.state.usersARY;
+            const users  = this.state.usersARY;
             return (
                 <>
                     <h1>USERS</h1>
