@@ -25,7 +25,7 @@ con.connect(function (err) {
  * CREATE
 ************/
 //Create new payment
-router.post("/paymentHistory/:payment_id:member_id:paymentDate", function (req, res) {
+router.post("/paymentHistory/:payment_id/:member_id/:paymentDate", function (req, res) {
     if (!req.params.class_id.includes(';') || !req.params.class_id.includes('"')) {
         con.query("INSERT INTO Payment_History (payment_id, member_id, payment_date) VALUES (?)", [req.params.payment_id, req.params.member_id, req.params.payment_date], (err, rows, fields) => {
             if (err) {
@@ -95,20 +95,20 @@ router.get("/users/:id", function (req, res){
 });
 
 //Login User
-router.post("/users/:username/:password", function(req, res){
-    con.query("SELECT * FROM Member WHERE (password) = ? AND (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
+router.post("/users/:username",function(req, res){
+    con.query("SELECT * FROM Member WHERE (email) = ?", [req.params.username], (err, row, fields)=>{
         if (err){
             console.log(err);
         }
         else{
-            res.send(rows);
+            res.send(row.password);
         }  
     })
-});
+})
 
 //Change User Password
-router.put("/users/:username:password", function(req, res){
-    con.query("UPDATE Member SET (password) = ?  WHERE (email) = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
+router.put("/users/:username/:password",function(req, res){
+    con.query("UPDATE Member SET password = ?  WHERE email = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
         if (err){
             console.log(err);
         }
