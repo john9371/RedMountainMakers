@@ -5,7 +5,7 @@ import Footer from './Components/footer'
 import Classes from './Components/Classes'
 // import Membership from './'
 import Contact from './Components/Contact'
-import Admin from './Components/Admin'
+// import Admin from './Components/Admin'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import './css/App.css';
@@ -24,7 +24,7 @@ class App extends Component {
               {/* <Route exact path="/Membership" component={Membership}/> */}
               <Route exact path="/Contact" component={Contact}/>
               {/* <Route exact path="/Supporters" component={Supporters}/> */}
-              <Route exact path="/Admin" component={Admin}/>
+              {/* <Route exact path="/Admin" component={Admin}/> */}
             </Switch>
           <Footer />  
         </>

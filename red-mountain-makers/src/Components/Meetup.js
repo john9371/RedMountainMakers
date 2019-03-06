@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../css/App.css';
 import '../css/materialize.css'
 import '../css/Classes.css'
-import Meetup from './Meetup'
-class App extends Component {
+
+class Meetup extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    fetch("https://www.eventbriteapi.com/v3/users/me/events/?token=GS3SVXQ6SKYYRQXFQL36")
+    fetch("https://api.meetup.com/events?&sign=true&photo-host=public&group_urlname=RedMountainMakers&page=20&key=44c2042573f1a4567702418401973")
       .then((response) => {
         return response.json();
       })
@@ -21,12 +21,6 @@ class App extends Component {
       });
   }
   render() {
-    var EventsLive = false;
-    this.state.events.map(v => {
-      console.log(v)
-      if (v.status == 'live') {EventsLive = true;}
-    })
-    if (EventsLive == true) {
       return (
         <div>
           <h3 className="center-align">Classes at the Space</h3>
@@ -39,8 +33,8 @@ class App extends Component {
                     {this.state.events.map(v => {
                       if (v.status = true) {
                         return (<div id="ClassPage">
-                          <h5>{v.name.text}</h5>
-                          <p>{v.description.text}</p>
+                          <h5>{v.name}</h5>
+                          <p>{v.description}</p>
                         </div>)
                       }
                     })}
@@ -49,15 +43,9 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <Meetup />
         </div>
       );
-    }else{
-      return (
-        <div>nothing</div>
-      )
-    }
   }
 }
-export default App;
+export default Meetup;
 
