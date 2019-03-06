@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Image from './RedMountainMakersLogo.png'
+//import Image from './RedMountainMakersLogo.png'
 import Style from '../css/style.css'
 import AllUsersFunction from './Functions/AdminUsers.js'
-const cors = require('cors')
 
 
 export default class Home extends Component {
@@ -24,7 +23,9 @@ export default class Home extends Component {
             const users  = this.state.usersARY;
             return (
                 <>
-                    <h1>USERS</h1>
+                    <h1 style={{textAlign: 'center'}}>Admin</h1>
+                    <br></br>
+                    <h3>Users</h3>
                     <ul>
                         {users.map(name => {
                             return <li key={name.member_id}>

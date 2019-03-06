@@ -447,7 +447,6 @@ class App extends Component {
     render() {
         return (
             <div>
-<<<<<<< HEAD
                 <body>
 
                     <h3>Classes at the Space</h3>
@@ -464,7 +463,6 @@ class App extends Component {
                         <li><a className="black-text text-darken-2" href="#">Cosplay!</a></li>
                     </div>
                 </body>
-=======
                 <h3>Classes at the Space</h3>
                 <div className="page-wrap">
                     {this.state.people.events.map(v => {
@@ -474,7 +472,6 @@ class App extends Component {
                         </div>)
                     })}
                 </div>
->>>>>>> 63b4ccd626b05cca11734aa59ae628cba881fdc6
             </div>
         );
     }
