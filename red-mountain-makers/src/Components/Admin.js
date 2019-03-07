@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-import Image from './RedMountainMakersLogo.png'
-import Style from '../css/style.css'
 import AllUsersFunction from './Functions/AdminUsers.js'
-const cors = require('cors')
-var app = express()
-app.use(cors())
 
 export default class Home extends Component {
 
@@ -16,7 +11,7 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/users')
+        fetch('http://172.16.21.56:5000/users')
             .then(res => res.json())
             .then(usersFromSite => this.setState({ usersARY: usersFromSite }));
     }

@@ -11,8 +11,12 @@ class Meetup extends Component {
     }
   }
   componentDidMount() {
-    fetch("https://api.meetup.com/events?&sign=true&photo-host=public&group_urlname=RedMountainMakers&page=20&key=44c2042573f1a4567702418401973")
+    fetch('https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=RedMountainMakers&page=20',{
+        mode: 'no-cors',
+        method: 'get'
+    })
       .then((response) => {
+          console.log(response)
         return response.json();
       })
       .then((events) => {
