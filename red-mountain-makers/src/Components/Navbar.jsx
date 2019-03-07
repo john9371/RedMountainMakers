@@ -12,7 +12,7 @@ function Navbar() {
                             <ul className="right hide-on-med-and-down">
                                 <li><a className="#d50000 red-text" href="http://localhost:3000/">Home</a></li>
                                 <li><a className="#d50000 red-text" href="http://localhost:3000/Classes">Classes We Offer</a></li>
-                                <li><a className="#d50000 red-text" href="#">Membership</a></li>
+                                <li><a className="#d50000 red-text" href="http://localhost:3000/Membership">Membership</a></li>
                                 <li><a className="#d50000 red-text" href="#">Donate</a></li>
                                 <li><a className="#d50000 red-text" href="http://localhost:3000/contact">Contact</a></li>
                             </ul>
@@ -20,7 +20,7 @@ function Navbar() {
                         <ul id="nav-mobile" className="sidenav">
                             <li><a className="#d50000 red-text" href="http://localhost:3000/">Home</a></li>
                             <li><a className="#d50000 red-text" href="http://localhost:3000/Classes">Classes We Offer</a></li>
-                            <li><a className="#d50000 red-text" href="#">Membership</a></li>
+                            <li><a className="#d50000 red-text" href="http://localhost:3000/Membership">Membership</a></li>
                             <li><a className="#d50000 red-text" href="#">Donate</a></li>
                             <li><a className="#d50000 red-text" href="http://localhost:3000/contact">Contact</a></li>
                         </ul>
