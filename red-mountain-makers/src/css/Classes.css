@@ -1,0 +1,10 @@
+#ClassPage{
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-top: -1.5px;
+    background: lightgray;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}

@@ -16,7 +16,7 @@ export default class Supporters extends Component {
           <div class="Obama">
             <div>
             </div>
-              <p>To Donate</p>
+              <p class="Donate">To Donate</p>
             <StripeProvider apiKey="pk_test_aEnBl38XEUIxKbay6USa7dvK">
               <div className="example">
                 

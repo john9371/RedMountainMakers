@@ -1,39 +1,85 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import '../css/materialize.css'
-var classes;
-var tokenReq = {
-    host: "eventbriteapi.com",
-    path: "/v3/users/me/?token=GS3SVXQ6SKYYRQXFQL36",
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer token"
-    }
-};
+import '../css/Classes.css'
+//import Meetup from './Meetup'
 
-export default class App extends Component {
-    render() {
-        return (
-            <div>
-                <body>
-                    <br></br>
-                    <h3>Classes at the Space</h3>
-                    <div id="content" className="page-wrap">
-                        <li><a className="black-text text-darken-2" href="#"> Tool Training: WoodShop 101</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: Learn to Wield</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Printers</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Tool Training: 3D Modeling</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Programming and Hardware</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Fibers!</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Bike Technology</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Wearable Technology</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Ceramics</a></li>
-                        <li><a className="black-text text-darken-2" href="#">Cosplay!</a></li>
-                    </div>
-                </body>
-            </div>
-        );
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      events: []
     }
+  }
+  componentDidMount() {
+    fetch("https://www.eventbriteapi.com/v3/users/me/events/?token=GS3SVXQ6SKYYRQXFQL36")
+      .then((response) => {
+        return response.json();
+      })
+      .then((events) => {
+        this.setState(events)
+        console.log(events)
+      });
+  }
+  render() {
+    var EventsLive = false;
+    this.state.events.map(v => {
+      console.log(v)
+      if (v.status == 'live') { EventsLive = true; }
+    })
+    if (EventsLive == true) {
+      return (
+        <div>
+          <div className="banner">
+            <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%' }}>Classes at the Space</div></h3>
+            <div className="container" >
+              <div className="section" >
+                <div className="row">
+                  {this.state.events.length < 4 &&
+                    <div className="col s12 m4">
+                      {/* <div className="icon-block"></div> */}
+                      <div className="page-wrap">
+                        {this.state.events.map(v => {
+                          if (v.status = true) {
+                            return (<div>
+                              <h5>{v.name.text}</h5>
+                              <p>{v.description.text}</p>
+                            </div>)
+                          }
+                        })}
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="center-align">Future events</h3>
+            <div className="container" >
+              <div className="section" >
+                <div className="row">
+                  <div className="col m12 m6">
+                    {/* <div className="icon-block"></div> */}
+                    <div className="page-wrap">
+                      Support for Meetup.com coming soon.
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <Meetup />  */}
+
+        </div>
+      );
+    } else {
+      return (
+        <div>nothing</div>
+      )
+    }
+  }
 }
 
+export default App;
