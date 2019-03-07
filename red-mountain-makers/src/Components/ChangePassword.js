@@ -66,33 +66,32 @@ class Login extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        let hashed = "";
-        fetch(`http://172.16.21.56:5000/users/${this.state.email}`, { method: 'post' })
-            .then((response) => {
-                let data = response.json();
-                console.log(data)
-                hashed = data.password;
-                return hashed;
-            })
-            .then((hashed) => {
-                bcrypt.compare(this.state.password, hashed, function (err, res) {
-                    console.log(hashed);
-                    //console.log(res);
-                })
-            })
+        // let hashed = "";
+        // fetch(`http://172.16.21.56:5000/users/${this.state.email}`, { method: 'post' })
+        //     .then((response) => {
+        //         let data = response.json();
+        //         console.log(data)
+        //         hashed = data.password;
+        //     })
+        //     .then(
+        //         bcrypt.compare(this.state.password, hashed, function (err, res) {
+        //             //console.log(hashed);
+        //             console.log(res);
+        //         })
+        //             )
 
+        //};
+
+        //    WORKS AS LONG AS API RETURNS CORRECT CORS HEADER
+        bcrypt.genSalt(10, function (err, salt) {
+            bcrypt.hash(this.state.password, salt, function (err, hash) {
+                hash = hash.replace(/\//g, "!")
+                console.log(`${hash}`);
+                fetch(`http://172.16.21.56:5000/users/${this.state.email}/${hash}`, { method: 'put', body: 'Updating Password' })
+                    .catch(error => console.log(error));
+            }.bind(this));
+        }.bind(this));
     };
-
-    //WORKS AS LONG AS API RETURNS CORRECT CORS HEADER
-    // bcrypt.genSalt(10, function (err, salt) {
-    //     bcrypt.hash(this.state.password, salt, function (err, hash) {
-    //         hash = hash.replace(/\//g, "!")
-    //         console.log(`${hash}`);
-    //         fetch(`http://172.16.21.56:5000/users/${this.state.email}/${hash}`, {method: 'put', body:'Updating Password'})
-    //         .catch(error => console.log(error));
-    //     }.bind(this));
-    // }.bind(this));
-
 
     handleChange(value, e) {
         this.setState({ [value]: e.target.value })
@@ -105,9 +104,9 @@ class Login extends Component {
                     Email:
                     <input type="text" placeholder="Email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
 
-                    Password:
+                    New Password:
     
-                    <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange.bind(this, 'password')} />
+                    <input type="password" placeholder="New Password" value={this.state.password} onChange={this.handleChange.bind(this, 'password')} />
 
                     <input type='checkbox' value="Remember me" />
 
