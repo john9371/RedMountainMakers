@@ -5,7 +5,8 @@ import '../css/Classes.css'
 //import Meetup from './Meetup'
 
 class App extends Component {
-  constructor(props) {
+
+  constructor(props){
     super(props);
     this.state = {
       events: []
