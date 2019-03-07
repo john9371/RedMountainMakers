@@ -23,75 +23,29 @@ class Login extends Component {
             email: "",
             password: ""
         };
-        // this.handleEmailChange = this.handleEmailChange.bind(this);
-        // this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        // this.handleLogin = this.handleLogin.bind(this);
     }
 
-    /*
-    // handleLogin = (event) => {
-    //     // let hashed = "";
-    //     // fetch(`172.16.21.56/users/7`)
-    //     //     .then((response) => {
-    //     //         hashed = response;
-    //     //     });
-    //     // bcrypt.compare(this.state.password, hashed, function (err, res) {
-    //     //     // res === true
-    //     // });
-    //     bcrypt.genSalt(10, function (err, salt) {
-    //         bcrypt.hash(this.state.password, salt, function (err, hash) {
-    //             fetch(`172.16.21.56/users/${this.state.email}/${hash}`)
-    //         });
-    //     });
-    // }
-
-    // handleEmailChange = (e) => {
-    //     this.setState({ email: e.target.value });
-    // }
-
-    // handlePasswordChange = (e) => {
-    //     this.setState({ password: e.target.value });
-    // }
-    // render() {
-
-    //     return (
-    //         <form>
-    //             <input type="text" name="email" placeholder="Email" onChange={this.handleEmailChange} />
-    //             <input type="password" name="password" placeholder="Password" onChange={this.handlePasswordChange} />
-    //             <button type="button" onClick={this.handleLogin}>Login</button>
-    //         </form>);
-    // }
-    */
 
     handleSubmit(e) {
         e.preventDefault();
 
-        let hashed = "";
-        fetch(`http://172.16.21.56:5000/users/${this.state.email}`, { method: 'post' })
-            .then((response) => {
-                let data = response.json();
-                console.log(data)
-                hashed = data.password;
-                return hashed;
-            })
-            .then((hashed) => {
-                bcrypt.compare(this.state.password, hashed, function (err, res) {
-                    console.log(hashed);
-                    //console.log(res);
-                })
-            })
+        window.location = '/Admin';
+        //let hashed = "";
+        // fetch(`http://172.16.21.56:5000/users/${this.state.email}`, { method: 'post' })
+        //     .then((response) => {
+        //         let data = response.json();
+        //         console.log(data)
+        //         hashed = data.password;
+        //         return hashed;
+        //     })
+        //     .then((hashed) => {
+        //         bcrypt.compare(this.state.password, hashed, function (err, res) {
+        //             console.log(hashed);
+        //             //console.log(res);
+        //         })
+        //     })
 
     };
-
-    //WORKS AS LONG AS API RETURNS CORRECT CORS HEADER
-    // bcrypt.genSalt(10, function (err, salt) {
-    //     bcrypt.hash(this.state.password, salt, function (err, hash) {
-    //         hash = hash.replace(/\//g, "!")
-    //         console.log(`${hash}`);
-    //         fetch(`http://172.16.21.56:5000/users/${this.state.email}/${hash}`, {method: 'put', body:'Updating Password'})
-    //         .catch(error => console.log(error));
-    //     }.bind(this));
-    // }.bind(this));
 
 
     handleChange(value, e) {
