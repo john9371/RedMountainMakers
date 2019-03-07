@@ -24,15 +24,13 @@ export default class Contact extends Component {
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
-                        <Row>
-                            <Input s={12} type='select' label="Materialize Select" defaultValue='2'>
+                        
                             <select id="state" name="state">
                                 <option value="Alabama">Alabama</option>
                                 <option value="Florida">Florida</option>
                                 <option value="Texas">Texas</option>
                                 </select>
-                            </Input>
-                        </Row>
+                          
                         <label for="state">State</label>
                 
                      
