@@ -35,7 +35,7 @@ class App extends Component {
             <div className="container" >
               <div className="section" >
                 <div className="row">
-                  {events.length < 4 &&
+                  {this.state.events.length < 4 &&
                     <div className="col s12 m4">
                       {/* <div className="icon-block"></div> */}
                       <div className="page-wrap">

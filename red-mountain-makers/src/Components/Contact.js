@@ -24,28 +24,23 @@ export default class Contact extends Component {
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
-                        <Row>
-                            <Input s={12} type='select' label="Materialize Select" defaultValue='2'>
-                            <select id="state" name="state">
-                                <option value="Alabama">Alabama</option>
-                                <option value="Florida">Florida</option>
-                                <option value="Texas">Texas</option>
-                                </select>
-                            </Input>
-                        </Row>
                         <label for="state">State</label>
-                
-                     
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
+                        <input type="text" id="lname" name="lastname" placeholder="state.." />
 
-                    <a onclick="Submit({html: 'New Maker'})" class="btn">Submit!</a>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
                     </form>
-            </div>
+                </div>
+                <form>
+                    <label>
+                       <input type="text" name="name" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
 
-            <div className="center" style={{ paddingBottom: "3%" }}>
-                <img src={Image} />
-            </div>
+                <div className="center" style={{ paddingBottom: "3%" }}>
+                    <img src={Image} />
+                </div>
             </div >
         )
     }
