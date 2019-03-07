@@ -10,11 +10,11 @@ export default class Contact extends Component {
                 <h2 className="center">Red Mountain Makers</h2>
                 <h5 className="center">Birmingham Alabama’s DIY tech co-operative and makerspace.<br />
                     Come make marvelous things with us!<br /></h5>
-                    <p className="center">5502 1st Avenue North,<br />
+                <p className="center">5502 1st Avenue North,<br />
                     Birmingham Alabama 35212<br />
                     United States<br /></p>
-               
-                <h3 className="center">Get in touch with us!</h3>
+
+                <span class="blue-text text-darken-2"></span><h3 className="center">Get in touch with us!</h3>
 
                 <div className="container">
                     <form action="/action_page.php">
@@ -23,26 +23,30 @@ export default class Contact extends Component {
 
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
-                        
-                        <label for="State">State</label>
-                        <input type="text" id="state" name="state" placeholder="Your State.." /><select id="state" name="state">
-                        <input type="text" id="state" name="state" placeholder="State.." />
-                            <option value="alabama">Alabama</option>
-                            <option value="florida">Florida</option>
-                            <option value="texas">Texas</option>
-                            </select>
 
-                        <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
+                        <Row>
+                            <Input s={12} type='select' label="Materialize Select" defaultValue='2'>
+                            <select id="state" name="state">
+                                <option value="Alabama">Alabama</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Texas">Texas</option>
+                                </select>
+                            </Input>
+                        </Row>
+                        <label for="state">State</label>
+                
+                     
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
 
-                        <input type="submit" value="Submit" />
+                    <a onclick="Submit({html: 'New Maker'})" class="btn">Submit!</a>
                     </form>
-                </div>
-
-                <div className="center" style={{paddingBottom:"3%"}}>
-                    <img src={Image} />
-                </div>
             </div>
+
+            <div className="center" style={{ paddingBottom: "3%" }}>
+                <img src={Image} />
+            </div>
+            </div >
         )
     }
 }

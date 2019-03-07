@@ -1,6 +1,9 @@
 const express = require('express');
 var mysql = require('mysql');
-const router = express.Router();
+var cors = require('cors');
+
+var app = express().use("*",cors());
+const router = app.Router();
 
 /****************
  * MySQL CONNECT
