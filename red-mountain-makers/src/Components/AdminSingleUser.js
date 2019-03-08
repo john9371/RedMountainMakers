@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SingleUserFunction from './Functions/AdmnSnglUsrFnctn.js';
 
-export default class person extends Component {
+export default class user extends Component {
 
     constructor(props) {
         super(props);
@@ -11,18 +11,19 @@ export default class person extends Component {
     }
 
     componentDidMount() {
-        fetch(`'http://localhost:5000/users/${this.props.match.params.id}`)
+        fetch(`http://localhost:5000/users/${this.props.match.params.member_id}`)
             .then(res => res.json())
             .then(personFromSite => this.setState({ personARY: personFromSite }));
     }
 
     render() {
         const user = this.state.personARY;
+
         return (
             <>
                 <main>
                     <div>
-                        <SingleUserFunction oneUser={user} />
+                        <SingleUserFunction user={user} />
                     </div>
                 </main>
             </>

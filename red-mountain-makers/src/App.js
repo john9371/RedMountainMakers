@@ -6,12 +6,13 @@ import Home from './Components/Home'
 // import Membership from './'
 import Contact from './Components/Contact'
 import Admin from './Components/Admin'
-import oneUser from './Components/AdminSingleUser'
+import user from './Components/AdminSingleUser'
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 //import Login from './Components/Login'
 import './css/App.css';
 //import Login from './Components/Login'
+
 
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
               {/* <Route exact path="/Contact" component={Contact}/> */}
               {/* <Route exact path="/Supporters" component={Supporters}/> */}
               <Route exact path="/Admin" component={Admin}/>
-              <Route path='/users/:id' component={oneUser} />
+              <Route exact path='/users/:id' component={user} />
             </Switch>
           {/*<Footer />  */}
         </>

@@ -8,10 +8,10 @@ var cors = require('cors');
 ****************/
 //var eventKey = FHLUZYFIPS7BLMZVXO
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "BeGre@t2019",
-    database: "makers_db"
+    host: "us-cdbr-iron-east-03.cleardb.net",
+    user: "bfadb246e846ce",
+    password: "95d7ac91",
+    database: "heroku_c27a2caa62cf028"
 });
 
 con.connect(function (err) {
@@ -46,15 +46,19 @@ router.post("/paymentHistory/:payment_id/:member_id/:paymentDate", cors(), funct
  * payment history
 ************/
 
-router.get("/users", cors(), function (req, res){
-    con.query("SELECT * FROM Member", (err, rows, fields)=>{
-        if (err){
+router.get("/users", cors(), function (req, res) {
+    con.query("SELECT * FROM Member", (err, rows, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
+        else {
             res.send(rows);
+            //x.push(rows);
+            //res.send(x)
         }
     })
+
+    
 });
 
 
@@ -84,62 +88,77 @@ router.post("/users/:id/:name/:password/:email/:status/:lastpaydate", cors(), fu
 });
 
 //Read User
-router.get("/users/:id", cors(), function (req, res){
-    con.query("SELECT * FROM Member WHERE (member_id) = ?", [req.params.id], (err, rows, fields)=>{
-        if (err){
+router.get("/users/:id", function (req, res) {
+    con.query("SELECT * FROM Member WHERE (member_id) = ?", [req.params.id], (err, rows, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
+        else {
             res.send(rows);
         }
     })
 });
 
 //Login User
-router.post("/users/:username", cors(), function(req, res){
-    con.query("SELECT * FROM Member WHERE (email) = ?", [req.params.username], (err, row, fields)=>{
-        if (err){
+router.post("/users/:username", cors(), function (req, res) {
+    con.query("SELECT * FROM Member WHERE email = ?", [req.params.username], (err, row, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
-            res.send(row.password);
-        }  
+        else {
+            console.log;
+            res.send(row);
+        }
     })
 })
 
 //Change User Password
-router.put("/users/:username/:password", cors(), function(req, res){
-    con.query("UPDATE Member SET password = ?  WHERE email = ?", [req.params.password, req.params.username], (err, rows, fields)=>{
-        if (err){
+router.put("/users/:username/:password", cors(), function (req, res) {
+    con.query("UPDATE Member SET password = ?  WHERE email = ?", [req.params.password, req.params.username], (err, rows, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
+        else {
             res.send(rows);
-        }  
+        }
     })
 });
 
 //Add Status
-router.post("/status/:id/:name/:price", cors(), function(req, res){
-    con.query("INSERT INTO Member_Status (id, membership_type, cost) VALUES  (?, ?, ?)", [req.params.id, req.params.name, req.params.price], (err, rows, fields)=>{
-        if (err){
+router.post("/status/:id/:name/:price", cors(), function (req, res) {
+    con.query("INSERT INTO Member_Status (id, membership_type, cost) VALUES  (?, ?, ?)", [req.params.id, req.params.name, req.params.price], (err, rows, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
+        else {
             res.send(rows);
-        } 
+        }
     })
 });
 
 //Edit Status
-router.post("/status/:id/:price", cors(), function(req, res){
-    con.query("UPDATE Member_Status SET (cost) VALUES  (?)", [req.params.id], (err, rows, fields)=>{
-        if (err){
+router.post("/status/:id/:price", cors(), function (req, res) {
+    con.query("UPDATE Member_Status SET (cost) VALUES  (?)", [req.params.id], (err, rows, fields) => {
+        if (err) {
             console.log(err);
         }
-        else{
+        else {
             res.send(rows);
-        } 
+        }
     })
 });
+
+//GET DataSummary Table
+router.get("/admin", cors(), function (req, res) {
+    con.query("SELECT * FROM DataSummary", (err, rows, fields) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.send(rows);
+        }
+    })
+});
+
+
 module.exports = router;

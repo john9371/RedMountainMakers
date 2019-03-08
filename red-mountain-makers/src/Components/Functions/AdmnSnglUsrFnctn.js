@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SingleUserFunction(props) {
 
-    const { member_id, name, email, date_created, member_status, last_payed, parent_id } = props.oneUser;
+    const { member_id, name, email, date_created, member_status, last_payed, parent_id } = props.name;
 
     return (
         <>
