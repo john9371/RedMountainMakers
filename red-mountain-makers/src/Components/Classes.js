@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import '../css/materialize.css'
+//import '../css/materialize.css'
+import { Card, Col, Carousel } from 'react-materialize'
 import '../css/Classes.css'
 //import Meetup from './Meetup'
 
@@ -30,46 +31,47 @@ class App extends Component {
     if (EventsLive == true) {
       return (
         <div>
-          <div className="banner">
+          <div className="banner" style={{ height: '60em' }}>
+
             <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%' }}>Classes at the Space</div></h3>
             <div className="container" >
               <div className="section" >
                 <div className="row">
                   {this.state.events.length < 4 &&
-                    <div className="col s12 m4">
-                      {/* <div className="icon-block"></div> */}
-                      <div className="page-wrap">
+                    <div >
+                      <Carousel>
                         {this.state.events.map(v => {
                           if (v.status = true) {
-                            return (<div>
-                              <h5>{v.name.text}</h5>
-                              <p>{v.description.text}</p>
-                            </div>)
+                            return (
+                              <Col m={5} s={12}>
+                                <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
+                                  {v.description.text}
+                                </Card>
+                              </Col>
+                            )
                           }
                         })}
-                      </div>
+                      </Carousel>
                     </div>
                   }
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            <h3 className="center-align">Future events</h3>
+          <div className="white banner" style={{ height: '60rem' }}>
+            <div className="valign-wrapper"style={{ height: '20rem' }}><h3 className="center-align" style={{height: '5rem', width: '100%' }}>Meet With Us in Events We Host</h3></div>
             <div className="container" >
               <div className="section" >
                 <div className="row">
-                  <div className="col m12 m6">
-                    {/* <div className="icon-block"></div> */}
-                    <div className="page-wrap">
-                      Support for Meetup.com coming soon.
-                  </div>
-                  </div>
+                  <Col m={10} s={12}>
+                    <Card className='grey' textClassName='white-text' title='Future' actions={[<a href=''>View the event</a>]}>
+                      Support coming soon
+                    </Card>
+                  </Col>
                 </div>
               </div>
             </div>
           </div>
-          {/* <Meetup />  */}
 
         </div>
       );
