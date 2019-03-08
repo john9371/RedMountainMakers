@@ -1,5 +1,11 @@
 body {
     background-color: lightgrey;
+    font-family: 'Arvo', serif;
+}
+
+* {
+    font-family: 'Arvo', serif;
+
 }
 
 .logo {
@@ -25,21 +31,53 @@ body {
     border-radius: 50px;
 }
 
+
+
 .focus {
     text-decoration-line: underline;
+    padding-top: 5%;
+}
+
+#focusText {
+    font-size: 1.5em;
+}
+
+.art {
+    padding-top: 50%;
+}
+
+.else {
+    padding-top: 10%;
 }
 
 
-
-
 .img {
-   
+    padding-top: 15%;
     position: relative;
     float: left;
-    width:  30vw;
+    width:  40vw;
     height: 50vh;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: contain;
     
 }
+
+.section {
+    height: 100vh;
+}
+
+
+hr {
+    border: 2px dashed black;
+}
+
+/* .other {
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-decoration-style: dashed;
+} */
+
+
+

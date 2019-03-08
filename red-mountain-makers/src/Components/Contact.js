@@ -42,6 +42,7 @@ export default class Contact extends Component {
                     <img src={Image} />
                 </div>
             </div >
+
         )
     }
 }

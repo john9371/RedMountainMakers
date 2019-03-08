@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
-import Image from '../assets/RMMLogo.png'
-import Image2 from '../assets/glass.jpg'
+import {Carousel} from 'react-materialize'
 
-export default class Carousel extends Component {
+
+export default class Caro extends Component {
     render() {
         return (
             <>
-                <Carousel options={{ fullWidth: true }} images={[
-                    {Image},
-                    {Image2}
-                    
+                <Carousel images={[
+                    'https://lorempixel.com/250/250/nature/1',
+                    'https://lorempixel.com/250/250/nature/2',
+                    'https://lorempixel.com/250/250/nature/3',
+                    'https://lorempixel.com/250/250/nature/4',
+                    'https://lorempixel.com/250/250/nature/5'
                 ]} />
             </>
         )
