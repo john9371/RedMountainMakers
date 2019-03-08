@@ -2,6 +2,8 @@ const express = require('express');
 var mysql = require('mysql');
 const router = express.Router();
 var cors = require('cors');
+express().use("*",cors());
+const router = express.Router();
 
 /****************
  * MySQL CONNECT
@@ -105,10 +107,9 @@ router.post("/users/:username", cors(), function (req, res) {
         if (err) {
             console.log(err);
         }
-        else {
-            console.log;
-            res.send(row);
-        }
+        else{
+            res.send(rows);
+        }  
     })
 })
 
@@ -159,6 +160,4 @@ router.get("/admin", cors(), function (req, res) {
         }
     })
 });
-
-
 module.exports = router;
