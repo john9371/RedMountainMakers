@@ -4,7 +4,13 @@
   "private": true,
   "dependencies": {
     "bcryptjs": "^2.4.3",
+<<<<<<< HEAD
+    "chart.js": "^2.7.3",
+=======
+    "cors": "^2.8.5",
+>>>>>>> backend
     "react": "^16.8.3",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.8.3",
     "react-materialize": "^2.6.0",
     "react-router-dom": "^4.3.1",
