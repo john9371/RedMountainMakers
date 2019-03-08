@@ -6,6 +6,13 @@ import Image2 from '../assets/robots.jpg'
 import Image3 from '../assets/printers.jpg'
 import Image4 from '../assets/molten.jpg'
 import Wrench from '../assets/wrench.jpg'
+import Glass from '../assets/glass.jpg'
+import Molten from '../assets/molten.jpg'
+import Wood from '../assets/wood.jpg'
+import Plants from '../assets/plants.jpg'
+import Chip from '../assets/chip.jpg'
+
+
 import css from '../css/home.css'
 
 
@@ -33,40 +40,54 @@ export default class Home extends Component {
           </div>
         </div>
 
+        <div className="row">
+          <div className="pics">
+            <div className="col s1 m4">
+              <img className="img responsive-img" src={Image3} />
+            </div>
+            <div className="col s1 m4">
+              <img className="img responsive-img" src={Molten} />
+            </div>
+            <div className="col s1 m4">
+              <img className="img responsive-img" src={Image2} />
+            </div>
+          </div>
+        </div>
 
         <div className="section #9e9e9e grey">
-            <div className="row">
-              <h3 className="focus center black-text">OUR FOCUS</h3>
-              <div className="col s12 m4">
-                <div className="icon-block">
-                  <h2 className="center #d50000 red-text"><i className="material-icons">flash_on</i></h2>
-                  <h4 className="center black-text">Tech and Engineering</h4>
-                  <br />
-                  <p className="light center black-text" id="focusText">We offer multiple labs and tools for your tech and engineering needs! From Circuits labs to 3D printing labs, members have access to entire host of tools and space at our Makerspace!</p>
-                </div>
+          <div className="row">
+            <h3 className="focus center black-text">OUR FOCUS</h3>
+            <div className="col s12 m4">
+              <div className="icon-block">
+                <h2 className="center #d50000 red-text"><i className="material-icons">flash_on</i></h2>
+                <h4 className="center black-text">Tech and Engineering</h4>
+                <br />
+                <p className="light center black-text" id="focusText">We offer multiple labs and tools for your tech and engineering needs! From Circuits labs to 3D printing labs, members have access to entire host of tools and space at our Makerspace!</p>
               </div>
+            </div>
 
-              <div className="col s12 m4">
-                <div className="art icon-block">
-                  <h2 className="center #d50000 red-text"><i className="material-icons">color_lens</i></h2>
-                  <h4 className="center black-text">Art</h4>
-                  <br />
-                  <p className="light center black-text" id="focusText">We offer multiple labs and tools for your artistic needs! We offer Sewing space with industrial sewing machines, woodshop, metal working tools, and more!<br/> Come stop by!</p>
-                </div>
+            <div className="col s12 m4">
+              <div className="art icon-block">
+                <h2 className="center #d50000 red-text"><i className="material-icons">color_lens</i></h2>
+                <h4 className="center black-text">Art</h4>
+                <br />
+                <p className="light center black-text" id="focusText">We offer multiple labs and tools for your artistic needs! We offer Sewing space with industrial sewing machines, woodshop, metal working tools, and more!<br /> Come stop by!</p>
               </div>
+            </div>
 
-              <div className="col s12 m4">
-                <div className="icon-block">
-                  <h2 className="center #d50000 red-text"><i className="material-icons">settings</i></h2>
-                  <h4 className="center black-text">Science</h4>
-                  <br />
-                  <p className="light center black-text" id="focusText">We offer multiple labs and tools for your scientific needs! Want to explore plant life, maybe try your hand at brewing. You can at Red Mountain Makers! We offer a biochem science lab for your scientifically inclined curiosity.</p>
-                </div>
+            <div className="col s12 m4">
+              <div className="icon-block">
+                <h2 className="center #d50000 red-text"><i className="material-icons">settings</i></h2>
+                <h4 className="center black-text">Science</h4>
+                <br />
+                <p className="light center black-text" id="focusText">We offer multiple labs and tools for your scientific needs! Want to explore plant life, maybe try your hand at brewing. You can at Red Mountain Makers! We offer a biochem science lab for your scientifically inclined curiosity.</p>
               </div>
             </div>
           </div>
+        </div>
 
         <br /> <br />
+
 
 
         <div>
@@ -107,13 +128,13 @@ export default class Home extends Component {
             <div className="row">
               <div className="pics">
                 <div className="col s1 m4">
-                  <img className="img responsive-img" src={Image3} />
+                  <img className="img responsive-img" src={Wood} />
                 </div>
                 <div className="col s1 m4">
-                  <img className="img responsive-img" src={Image4} />
+                  <img className="img responsive-img" src={Chip} />
                 </div>
                 <div className="col s1 m4">
-                  <img className="img responsive-img" src={Image2} />
+                  <img className="img responsive-img" src={Plants} />
                 </div>
               </div>
             </div>
