@@ -1,5 +1,11 @@
 body {
     background-color: lightgrey;
+    font-family: 'Arvo', serif;
+}
+
+* {
+    font-family: 'Arvo', serif;
+
 }
 
 .logo {

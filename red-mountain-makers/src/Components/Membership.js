@@ -8,6 +8,7 @@ export default class Membership extends Component {
         return (
             <div>
                 <div class="row">
+                <p class="flow-text">
                     <div class="center-align"><p><h1>How to become a Maker</h1><br />
                         Come Tour the space! We have open ours Tuesday, Thursday, and Sunday 6:30pm - 9:00pm<br />
                         Become a Basic Member, its super easy! Purchase your membership here! Since an important<br />
@@ -22,12 +23,13 @@ export default class Membership extends Component {
                         method of entry in addition to any other property owned by Red Mountain Makers<br/>
                         to a member of the board of directors or an agent designated by the board of<br/>
                         directors for this purpose.
-                        </p></div>
+                        </p></div></p>
                     <div class="col s12 m4 l1"><p>@</p></div>
                     <div class="col s12 m4 l8"><p>$</p></div>
                     <div class="col s12 m4 l1"><p>&</p></div>
                 </div>
                 <div class="row">
+                <span class="red-text text-darken-2">
                     <div class="col s12 m6 l3"><p>BASIC MAKER<br />
                         $40/month<br />
                         Access to space during open hours<br />
@@ -48,11 +50,10 @@ export default class Membership extends Component {
                         Under Construction<br /></p></div>
                     <div class="col s12 m6 l3"><p>MAKER-PANEUR<br />
                         $200/month<br />
-                        Under Construction<br /></p></div>
-                   
+                        Under Construction<br /></p></div></span>
 
-
-                </div>
+                        
+                       </div>
             </div>
         )
 
