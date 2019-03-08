@@ -8,6 +8,6 @@ export default function ChartFunction(props) {
         total_new_members_march, members_unpaid } = props.info;
 
     return (
-
-    )
+            l
+    );
 }
