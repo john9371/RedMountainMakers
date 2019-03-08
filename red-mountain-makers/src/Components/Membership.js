@@ -24,9 +24,9 @@ export default class Membership extends Component {
                         to a member of the board of directors or an agent designated by the board of<br/>
                         directors for this purpose.
                         </p></div></p>
-                    <div class="col s12 m4 l1"><p>@</p></div>
+                    {/* <div class="col s12 m4 l1"><p>@</p></div>
                     <div class="col s12 m4 l8"><p>$</p></div>
-                    <div class="col s12 m4 l1"><p>&</p></div>
+                    <div class="col s12 m4 l1"><p>&</p></div> */}
                 </div>
                 <div class="row">
                 <span class="red-text text-darken-2">
