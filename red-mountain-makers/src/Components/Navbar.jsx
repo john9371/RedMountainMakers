@@ -12,13 +12,13 @@ function navbar() {
                         <ul className="right hide-on-med-and-down">
                             <li><a className="#d50000 red-text" href="http://localhost:3000/">Home</a></li>
                             <li><a className="#d50000 red-text" href="http://localhost:3000/Classes">Classes We Offer</a></li>
-                            <li><a className="#d50000 red-text" href="#">Membership</a></li>
+                            <li><a className="#d50000 red-text" href="http://localhost:3000/Membership">Membership</a></li>
                             <li><a className="#d50000 red-text" href="#">Donate</a></li>
                             <li><a className="#d50000 red-text" href="http://localhost:3000/contact">Contact</a></li>
                         </ul>
                     </div>
-                    </nav>
-                    {/* <div className="nav-wrapper">
+                </nav>
+                {/* <div className="nav-wrapper">
                         {/* <a href="#!" class="brand-logo">Logo</a> 
                         <a href="#" data-target="mobile-demo" className="sidenav-trigger" ></a>
                         <ul className="right hide-on-med-and-down">
