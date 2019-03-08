@@ -5,49 +5,32 @@ class Chart extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartData: {
-                labels: ['totalMembers', 'basicMembers', 'premiumMembers', 'membersUnpaid',
-                    'NewMembersDec2018', 'NewMembersJan2019', 'NewMembersFeb2019', 'NewMemebrsMar2019'],
+            chartData1: {
+                labels: ['totalMembers', 'basicMembers', 'premiumMembers', 'membersUnpaid'],
                 datasets: [
-                    { 
+                    {
                         label: "Members Info",
-
-                        data: [
-                            8,
-                            5,
-                            3,
-                            8,
-                            2,
-                            2,
-                            1.2,
-                            3
-                        ],
-                        backgroundColor: [
-                            'black',
-                            'blue',
-                            'black',
-                            'blue',
-                            'green',
-                            'green',
-                            'green',
-                            'green'
-                        ]
+                        data: [8, 5, 3.1, 8],
+                        backgroundColor: ['rgba(99,99,222)', 'rgba(155,99,132)', 'rgba(155,99,132)', 'rgba(255,99,132)']
                     }
                 ]
             }
         }
     }
 
-        render(){
-            return (
+
+    render() {
+        return (
+            <div classname="Charts">
                 <div classname="chart">
                     <Bar
-                        data={this.state.chartData}
+                        data={this.state.chartData1}
                         options={{}}
                     />
                 </div>
-            )
-        }
+            </div>
+        )
     }
+}
 
-    export default Chart;
+export default Chart;
