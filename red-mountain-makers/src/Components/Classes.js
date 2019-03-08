@@ -7,7 +7,7 @@ import '../css/Classes.css'
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       events: []
@@ -40,19 +40,17 @@ class App extends Component {
                 <div className="row">
                   {this.state.events.length < 4 &&
                     <div >
-                      <Carousel>
-                        {this.state.events.map(v => {
-                          if (v.status = true) {
-                            return (
-                              <Col m={5} s={12}>
-                                <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
-                                  {v.description.text}
-                                </Card>
-                              </Col>
-                            )
-                          }
-                        })}
-                      </Carousel>
+                      {this.state.events.map(v => {
+                        if (v.status = true) {
+                          return (
+                            <Col m={5} s={12}>
+                              <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
+                                {v.description.text}
+                              </Card>
+                            </Col>
+                          )
+                        }
+                      })}
                     </div>
                   }
                 </div>
@@ -60,7 +58,7 @@ class App extends Component {
             </div>
           </div>
           <div className="white banner" style={{ height: '60rem' }}>
-            <div className="valign-wrapper"style={{ height: '20rem' }}><h3 className="center-align" style={{height: '5rem', width: '100%' }}>Meet With Us in Events We Host</h3></div>
+            <div className="valign-wrapper" style={{ height: '20rem' }}><h3 className="center-align" style={{ height: '5rem', width: '100%' }}>Meet With Us in Events We Host</h3></div>
             <div className="container" >
               <div className="section" >
                 <div className="row">

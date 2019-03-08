@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
 //import Image from './RedMountainMakersLogo.png'
 import Style from '../css/style.css'
 import AllUsersFunction from './Functions/AdminUsers.js'
 import DataFunction from './Functions/dataFunction.js'
 import Chart from './Functions/charts';
 //import ChartFunction from '.Functions/charts2'
-=======
-import AllUsersFunction from './Functions/AdminUsers.js'
->>>>>>> backend
 
 export default class Home extends Component {
 
@@ -21,14 +17,10 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-<<<<<<< HEAD
         fetch('http://localhost:5000/admin')
             .then(res => res.json())
             .then(dataFromSite => this.setState({ dataARY: dataFromSite }));
         fetch('http://localhost:5000/users')
-=======
-        fetch('http://172.16.21.56:5000/users')
->>>>>>> backend
             .then(res => res.json())
             .then(usersFromSite => this.setState({ usersARY: usersFromSite }));
     }
