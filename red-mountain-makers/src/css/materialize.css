@@ -23,9 +23,10 @@ ul {
   padding-left: 500px;
 }
 .indent {
-  padding-left: 250px;
+  padding-left: 10px;
 }
-.topknot{ padding-left: 250px;}
+.topknot{ padding-left: 250px;
+margin-left: auto;}
 /**************
  Lou CSS above
 *****************/
