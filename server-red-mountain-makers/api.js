@@ -3,7 +3,6 @@ var mysql = require('mysql');
 const router = express.Router();
 var cors = require('cors');
 express().use("*",cors());
-const router = express.Router();
 
 /****************
  * MySQL CONNECT
