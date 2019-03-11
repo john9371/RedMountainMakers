@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Image from '../assets/RMMLogo.png'
-
+import {Toast} from 'react-materialize'
 
 
 export default class Contact extends Component {
@@ -35,7 +35,12 @@ export default class Contact extends Component {
                     <label>
                        <input type="text" name="name" />
                     </label>
-                    <input type="submit" value="Submit" />
+                   <div className="submit">
+                   
+                    <Toast toast="thanks">
+                    Submit
+                    </Toast>
+                    </div> 
                 </form>
 
                 <div className="center" style={{ paddingBottom: "3%" }}>
