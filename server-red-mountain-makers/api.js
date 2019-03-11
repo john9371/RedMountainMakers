@@ -20,6 +20,12 @@ con.connect(function (err) {
     console.log("Connected!");
 });
 
+setInterval(function(){con.query("Select 1", (err, rows, fields) => {
+    if (err) {
+        console.log(err);
+    }
+}); }, 50000);
+
 /****************
  * API ROUTING
 ****************/
