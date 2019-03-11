@@ -43,11 +43,23 @@ class App extends Component {
                       {this.state.events.map(v => {
                         if (v.status = true) {
                           return (
-                            <Col m={5} s={12}>
-                              <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
-                                {v.description.text}
-                              </Card>
-                            </Col>
+                            <div className="row" >
+                              <Col m={4} s={12}>
+                                <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
+                                  {v.description.text}
+                                </Card>
+                              </Col>
+                              <Col m={4} s={12}>
+                                <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
+                                  {v.description.text}
+                                </Card>
+                              </Col>
+                              <Col m={4} s={12}>
+                                <Card className='grey darken-1' textClassName='white-text' title={v.name.text} actions={[<a href={v.url}>View the event</a>]}>
+                                  {v.description.text}
+                                </Card>
+                              </Col>
+                            </div>
                           )
                         }
                       })}
