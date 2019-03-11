@@ -29,21 +29,21 @@ class Login extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        window.location = '/Admin';
-        //let hashed = "";
-        // fetch(`https://red-mountain-makers.herokuapp.com/users/${this.state.email}`, { method: 'post' })
-        //     .then((response) => {
-        //         let data = response.json();
-        //         console.log(data)
-        //         hashed = data.password;
-        //         return hashed;
-        //     })
-        //     .then((hashed) => {
-        //         bcrypt.compare(this.state.password, hashed, function (err, res) {
-        //             console.log(hashed);
-        //             //console.log(res);
-        //         })
-        //     })
+        // window.location = '/Admin';
+        let hashed = "";
+        fetch(`https://red-mountain-makers.herokuapp.com/users/${this.state.email}`, { method: 'post' })
+            .then((response) => {
+                let data = response.json().value;
+                console.log(data)
+                hashed = data;
+                return hashed;
+            })
+            .then((hashed) => {
+                bcrypt.compare(this.state.password, hashed, function (err, res) {
+                    console.log(hashed);
+                    //console.log(res);
+                })
+            })
 
     };
 
