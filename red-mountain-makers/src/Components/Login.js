@@ -31,7 +31,7 @@ class Login extends Component {
 
         window.location = '/Admin';
         //let hashed = "";
-        // fetch(`http://172.16.21.56:5000/users/${this.state.email}`, { method: 'post' })
+        // fetch(`https://red-mountain-makers.herokuapp.com/users/${this.state.email}`, { method: 'post' })
         //     .then((response) => {
         //         let data = response.json();
         //         console.log(data)
