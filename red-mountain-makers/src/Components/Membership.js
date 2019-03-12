@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Glow from '../assets/glow red.jpg'
-
+import Building from '../assets/building red.jpg'
+import Room from '../assets/classroom.jpg'
+import { Card, Col, Row } from 'react-materialize'
 
 
 
@@ -26,45 +28,75 @@ export default class Membership extends Component {
                             directors for this purpose.
                         </p></div></p>
                     <div className="line">
-                    <img className="photo" src={Glow} />
-                    <div class="col s12 m4 l1"><p></p></div>
+                        <img className="photo" src={Glow}
+                            width={400}
+                            height={300}
+                            alignleft />
+                        <div class="col s12 m4 l1"><p></p></div>
                     </div>
-                    
-                    <div class="col s12 m4 l8"><p></p></div>
-                    <div class="col s12 m4 l1"><p></p></div>
-                </div>
-                <div class="row">
+                    <div className="str">
+                        <img className="pic" src={Building}
+                            width={400}
+                            height={300} />
+                        <div class="col s12 m4 l3"><p></p></div>
+                    </div>
+                    <div className="narrow">
+                        <img className="image" src={Room}
+                            width={400}
+                            height={300} />
+                        <div class="col s12 m4 l5"><p></p></div>
+                    </div>
+                    <Row>
                     <span class="red-text text-darken-2">
-                        <div class="col s12 m6 l3"><p>BASIC MAKER<br />
-                            $40/month<br />
-                            Access to space during open hours<br />
-                            Early Discounts on classes and workshops<br />
-                            Eligible for Full Memberships<br />
-                            Join Maker community<br /></p></div>
-                        <div class="col s12 m6 l3"><p>FULL MAKER<br />
-                            $80/month<br />
-                            24/7 key access to makerspace<br />
-                            Access to space during open hours<br />
-                            Early Discounts on classes and workshops<br />
-                            Join Maker community<br />
-                            Eligibility to submit issues before the board of directors<br />
-                            Eligibility to vote for officers and directors<br />
-                            Eligibility to vote on issues put before the membership</p></div>
-                        <div class="col s12 m6 l3"><p>MAKER PRO<br />
-                            $120/month<br />
-                            Under Construction<br /></p></div>
-                        <div class="col s12 m6 l3"><p>MAKER-PANEUR<br />
-                           $200/month<br />
-                            Under Construction<br /></p></div></span>
+                        <Col s={12} m={2}>
+                            <Card title="BASIC MAKER"><p>
+                                $40/month<br />
+                                Access to space during open hours<br />
+                                Early Discounts on classes and workshops<br />
+                                Eligible for Full Memberships<br />
+                                Join Maker community<br /></p>
+                
+                            </Card>
+                        </Col>
+                    </span>
+                        <span class="red-text text-darken-2">
+                            <Col s={12} m={3}>
+                                <Card title="FULL MAKER"><p>
+                                    $80/month<br />
+                                    24/7 key access to makerspace<br />
+                                    Access to space during open hours<br />
+                                    Early Discounts on classes and workshops<br />
+                                    Join Maker community<br />
+                                    Eligibility to submit issues before the board of directors<br />
+                                    Eligibility to vote for officers and directors<br />
+                                    Eligibility to vote on issues put before the membership</p>
 
-                    <div>
+                                </Card>
+                            </Col>
+                        </span>
 
+                        <span class="red-text text-darken-2">
+                            <Col s={12} m={2}>
+                                <Card title="MAKER PRO">
+                                    $120/month<br />
+                                    Under Construction<br />
+                                </Card>
+                            </Col>
+                        </span>
+                        <span class="red-text text-darken-2">
+                            <Col s={12} m={2}>
+                                <Card title="MAKER-PANUER">
+                                    $210/month<br />
+                                    Under Construction<br />
+                                </Card>
+                            </Col>
+                        </span>
 
-                    </div>
+                    </Row>
                 </div>
             </div>
-        )
-
-    }
-}
-
+                )
+        
+            }
+        }
+        
