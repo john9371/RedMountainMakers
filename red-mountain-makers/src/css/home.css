@@ -1,0 +1,83 @@
+body {
+    background-color: lightgrey;
+    font-family: 'Arvo', serif;
+}
+
+* {
+    font-family: 'Arvo', serif;
+
+}
+
+.logo {
+    height: 50%
+}
+
+.banner {
+    /* background-image: url("../assets/wrench.jpg"); */
+    max-width:100%;
+    max-height:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.header {
+    color: black;
+    
+}
+
+#download-button {
+    border-radius: 50px;
+}
+
+
+
+.focus {
+    text-decoration-line: underline;
+    padding-top: 5%;
+}
+
+#focusText {
+    font-size: 1.5em;
+}
+
+.art {
+    padding-top: 50%;
+}
+
+.else {
+    padding-top: 10%;
+}
+
+
+.img {
+    padding-top: 15%;
+    position: relative;
+    float: left;
+    width:  40vw;
+    height: 50vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    
+}
+
+.section {
+    height: 100vh;
+}
+
+
+hr {
+    border: 2px dashed black;
+}
+
+/* .other {
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-decoration-style: dashed;
+} */
+
+
+

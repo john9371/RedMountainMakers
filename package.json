@@ -2,9 +2,10 @@
   "name": "makers-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server-red-mountain-makers/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server-red-mountain-makers/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "dependencies": {
     "@types/react-stripe-elements": "^1.1.10",
     "@types/stripe": "^6.19.8",
+    "react-materialize": "^2.6.0",
     "react-stripe-elements": "^2.0.3",
     "stripe": "^6.25.1"
   }
