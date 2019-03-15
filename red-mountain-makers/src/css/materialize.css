@@ -7,6 +7,12 @@
 
   color: black;
 }
+.cont{
+  max-width: 250px;
+}
+.mid{ text-align: center;
+
+}
 #colour{background-color: lightgray}
 .Obama {
   background-color: lightgray; 

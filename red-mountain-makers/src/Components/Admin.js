@@ -5,7 +5,7 @@ import AllUsersFunction from './Functions/AdminUsers.js'
 import DataFunction from './Functions/dataFunction.js'
 import Chart from './Functions/charts';
 import Chart2 from './Functions/charts2';
-//import ChartFunction from '.Functions/charts2'
+import ChartFunction from './Functions/charts2'
 
 export default class Home extends Component {
 
@@ -37,7 +37,11 @@ export default class Home extends Component {
                     {/* </div><ChartFunction data={chartData}/>  */}
                 </div>
                 <div>
+<<<<<<< HEAD
                     <Chart />
+=======
+                    {/* <Chart chart.js /> */}
+>>>>>>> fd7ae82817b7de0b9ce3c16ed029acb505827ba6
                     <Chart2 />
                 </div>
                 <br></br>

@@ -38,7 +38,7 @@ export default class Supporters extends Component {
                 <h5>You donation doesn't just keep our nonprofit organization running! It purchases new equipment, sponsors members who would not be able to afford membership, support our prgorams and more..
                 </h5> 
                 </div>
-                <div> 
+                <div className="Cont"> 
                   <img className="PitArea" src={Pit} />
                 <iframe width="320" height="240" src="https://www.youtube.com/embed/mCpvIQZth0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
                 <img className="DDonate" src={Donate} />
@@ -126,7 +126,8 @@ export default class Supporters extends Component {
                 <ul>
                   <li className="topknot">Keith Davis, Davis Professional Services, accounting</li>
                 </ul>
-              <br /><br /><br /><br />
+              <br /><br /><br /><br /> 
+              <h1 className="mid">Thank You!</h1>
             </div>
           </div>
       </div>
