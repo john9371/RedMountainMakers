@@ -5,7 +5,7 @@ import AllUsersFunction from './Functions/AdminUsers.js'
 import DataFunction from './Functions/dataFunction.js'
 import Chart from './Functions/charts';
 import Chart2 from './Functions/charts2';
-import ChartFunction from '.Functions/charts2'
+import ChartFunction from './Functions/charts2'
 
 export default class Home extends Component {
 
