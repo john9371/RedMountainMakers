@@ -11,48 +11,58 @@ import Workshop from '../assets/Workshop.jpg'
 import Banner from '../assets/Banner.png'
 export default class Supporters extends Component {
   render() {
-    return (  
+    return (
 
 
 
       <div className="Trump">
 
-        <div className="banner"> 
+        <div className="banner">
           <div className="section no-pad-bot" id="index-banner">
             <div className="container">
               <div className="row center">
-                <h3 className="header col s12 light">Donate to our Makerspace</h3>
+
               </div>
               <br /><br />
               <div className="row center">
-              <strong>  <StripeProvider apiKey="pk_test_aEnBl38XEUIxKbay6USa7dvK">
-                <div className="example">
-                <img className="Banner" src={Banner} /> <br></br>
-                  <Elements>
-                    <Checkout />
-                  </Elements>
-                </div>
-              </StripeProvider></strong>
-              </div> 
+                <strong>  <StripeProvider apiKey="pk_test_aEnBl38XEUIxKbay6USa7dvK">
+                  <div className="example">
+                    <img className="Banner" src={Banner} /> <br></br>         
+                           <h3 className="header col s12 light">Donate to our Makerspace</h3>
+                    <Elements>
+                      <Checkout />
+                    </Elements>
+                  </div>
+                </StripeProvider></strong>
+              </div>
               <div>
                 <h5>You donation doesn't just keep our nonprofit organization running! It purchases new equipment, sponsors members who would not be able to afford membership, support our prgorams and more..
-                </h5> 
+                </h5>
+              </div>
+              <div className="row">
+              <div className="pics">
+              <div className="col s1 m4">
+                <img className="img responsive-img" id="donate"src={Pit} />
                 </div>
-                <div className="Cont"> 
-                  <img className="PitArea" src={Pit} />
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/mCpvIQZth0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
-                <img className="DDonate" src={Donate} />
-                <img className="DDonate" src={Pour} />
-               
-                  </div>
-              <br/><br/>
+                
+                <div className="col s1 m4">
+                <img className="img responsive-img" id="donate" src={Donate} />
+                </div>
+                <div className="col s1 m4">
+                <img className="img responsive-img" id="donate" src={Pour} />
+                </div>
+                <div>
+                </div>
+              </div>
+              </div>
+              <br /><br />
             </div>
           </div>
         </div>
-
-        <h1> Supporters</h1>
+        <div className="coco">
+          <h1> Supporters</h1>
           <div className="Obama" >
-            
+
             <div className="container" id="colour" >
               <br />
               <h4>Our Supporters</h4><br />
@@ -63,73 +73,74 @@ export default class Supporters extends Component {
               <br /><br /><br /><br /><br /><br /><br />
               <h4>SUPPLIES AND EQUIPMENT DONATIONS – 2015</h4>
               <p className="topknot">From our membership and friends:</p>
-            <ul className="roll-list">
-                  <li className="topknot">Kurt Fattig</li>
-                  <li className="topknot">Mark Gilber</li>
-                  <li className="topknot">Mark D. Garfinkel and Shirley Hicks</li>
-                  <li className="topknot">Sally Kuhn</li>
-                  <li className="topknot">Shawn Pearson</li>
-                  <li className="topknot">John Rhymes</li>
-                  <li className="topknot">Iris Rinke-Hammer</li>
-                  <li className="topknot">Daniel Near</li>
-                  <li className="topknot">Jessica Peterson</li>
-                  <li className="topknot">Juan Porras</li>
-                  <li className="topknot">Ruth Truett</li>
-                  <li className="topknot">Trae Watson</li>
-                  <li className="topknot">Steven Wyss</li>
-                </ul>
+              <ul className="roll-list">
+                <li className="topknot">Kurt Fattig</li>
+                <li className="topknot">Mark Gilber</li>
+                <li className="topknot">Mark D. Garfinkel and Shirley Hicks</li>
+                <li className="topknot">Sally Kuhn</li>
+                <li className="topknot">Shawn Pearson</li>
+                <li className="topknot">John Rhymes</li>
+                <li className="topknot">Iris Rinke-Hammer</li>
+                <li className="topknot">Daniel Near</li>
+                <li className="topknot">Jessica Peterson</li>
+                <li className="topknot">Juan Porras</li>
+                <li className="topknot">Ruth Truett</li>
+                <li className="topknot">Trae Watson</li>
+                <li className="topknot">Steven Wyss</li>
+              </ul>
               <br /><br /><br /><br /><br /><br /><br />
               <h4>FINANCIAL DONATIONS – 2015</h4>
               <br /><br />
               <p className="topknot">From our membership and friends:</p>
-            <ul>
-                  <li className="topknot">An anonymous donor</li>
-                  <li className="topknot">Mark Gilbert</li>
-                </ul>
+              <ul>
+                <li className="topknot">An anonymous donor</li>
+                <li className="topknot">Mark Gilbert</li>
+              </ul>
               <br /><br /><br /><br /><br /><br /><br />
               <h4>ADVISORS – 2015</h4>
-                <ul>
-                  <li className="topknot">John Rhymes</li>
-                  <li className="topknot">Steven Wyss</li>
-                </ul>
+              <ul>
+                <li className="topknot">John Rhymes</li>
+                <li className="topknot">Steven Wyss</li>
+              </ul>
               <br /><br /><br /><br /><br /><br /><br />
               <h4>SUPPLIES AND EQUIPMENT DONATIONS – 2014</h4>
               <p className="topknot">From our membership and friends:</p>
-            <ul>
-                  <li className="topknot">Mykel Alvis</li>
-                  <li className="topknot">Baird Castleberry</li>
-                  <li className="topknot">Kurt Fattig</li>
-                  <li className="topknot">Mark D. Garfinkel and Shirley Hicks</li>
-                  <li className="topknot">Bill Hudson</li>
-                  <li className="topknot">Chris Lais</li>
-                  <li className="topknot">Lynette Pope</li>
-                  <li className="topknot">John Rhymes</li>
-                  <li className="topknot">Trae Watson</li>
-                  <li className="topknot">Steven Wyss</li>
-                  <li className="topknot">Rick and Cynthia Curl</li>
-                  <li className="topknot">Rick Curl's parents, Bob & Nell Curl, who graciously gave us workshop furniture and equipment, and photography equipment.</li>
-                </ul>
+              <ul>
+                <li className="topknot">Mykel Alvis</li>
+                <li className="topknot">Baird Castleberry</li>
+                <li className="topknot">Kurt Fattig</li>
+                <li className="topknot">Mark D. Garfinkel and Shirley Hicks</li>
+                <li className="topknot">Bill Hudson</li>
+                <li className="topknot">Chris Lais</li>
+                <li className="topknot">Lynette Pope</li>
+                <li className="topknot">John Rhymes</li>
+                <li className="topknot">Trae Watson</li>
+                <li className="topknot">Steven Wyss</li>
+                <li className="topknot">Rick and Cynthia Curl</li>
+                <li className="topknot">Rick Curl's parents, Bob & Nell Curl, who graciously gave us workshop furniture and equipment, and photography equipment.</li>
+              </ul>
               <h4>COMMUNITY SUPPORTERS – 2014</h4>
-                <ul>
-                  <li className="topknot">The McWane Center</li>
-                  <li className="topknot">Alabama13</li>
-                  <li className="topknot">The Greater Birmingham Fiber Guild</li>
-                  <li className="topknot">Community Properties LLC</li>
-                </ul>
+              <ul>
+                <li className="topknot">The McWane Center</li>
+                <li className="topknot">Alabama13</li>
+                <li className="topknot">The Greater Birmingham Fiber Guild</li>
+                <li className="topknot">Community Properties LLC</li>
+              </ul>
               <h4>FINANCIAL DONATIONS – 2014</h4>
-                <ul>
-                  <li className="topknot">Mykel Alvis</li>
-                  <li className="topknot">Alex Rosen</li>
-                  <li className="topknot">VMware</li>
-                </ul>
+              <ul>
+                <li className="topknot">Mykel Alvis</li>
+                <li className="topknot">Alex Rosen</li>
+                <li className="topknot">VMware</li>
+              </ul>
               <h4>ADVISORS – 2014</h4>
-                <ul>
-                  <li className="topknot">Keith Davis, Davis Professional Services, accounting</li>
-                </ul>
-              <br /><br /><br /><br /> 
+              <ul>
+                <li className="topknot">Keith Davis, Davis Professional Services, accounting</li>
+              </ul>
+              <br /><br /><br /><br />
               <h1 className="mid">Thank You!</h1>
             </div>
           </div>
+        </div>
       </div>
     )
   }
