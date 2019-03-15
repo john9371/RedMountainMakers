@@ -35,7 +35,7 @@ body {
 
 .focus {
     text-decoration-line: underline;
-    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #focusText {
@@ -52,15 +52,17 @@ body {
 
 
 .img {
-    padding-top: 15%;
+    padding: 0;
+    margin: 0;
     position: relative;
     float: left;
-    width:  40vw;
+    width:  50vw;
     height: 50vh;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: contain;
+    border: 1px solid black;
     
 }
 
@@ -73,11 +75,8 @@ hr {
     border: 2px dashed black;
 }
 
-/* .other {
-    text-decoration-line: underline;
-    text-decoration-color: black;
-    text-decoration-style: dashed;
-} */
-
+.glass {
+    margin-right: 0%;
+}
 
 

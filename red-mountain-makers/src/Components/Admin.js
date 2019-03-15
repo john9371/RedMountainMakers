@@ -37,7 +37,7 @@ export default class Home extends Component {
                     {/* </div><ChartFunction data={chartData}/>  */}
                 </div>
                 <div>
-                    <Chart chart.js />
+                    {/* <Chart chart.js /> */}
                     <Chart2 />
                 </div>
                 <br></br>
