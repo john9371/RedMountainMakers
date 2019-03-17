@@ -132,7 +132,30 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <br /><br /><br /><br /><br /><br />
+        <br /><br /><br />
+        
+        <div className="container">
+                    <form action="/action_page.php">
+                        <label for="fname">Contact Info</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your first Name.." />
+
+                        <label for="lname">First Name</label>
+                        <input type="text" id="lname" name="firstname" placeholder="Your last name.." />
+
+                        <label for="state">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="state.." />
+
+                        <label for="subject">E-mail</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
+                    </form>
+                </div>
+                <form>
+                    <label>
+                       <input type="text" name="name" />
+                    </label>
+                   
+                </form>
+                <br /><br /><br />
       </>
     )
   }
