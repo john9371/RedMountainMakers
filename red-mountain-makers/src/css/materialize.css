@@ -3,11 +3,18 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
- .Trump { background-color: gray ;
+ .Trump {
+   background-color: gray ;
+
   color: black;
 }
+
+.mid{ text-align: center;
+
+}
+#colour{background-color: lightgray}
 .Obama {
-  background-color: white; 
+  background-color: lightgray; 
   color:black;
 }
 .Donate{ color: black;
@@ -15,7 +22,7 @@
 
 }
 .page-wrap{ padding-bottom: 100px;
-  padding-top: 83px;
+  padding-top: 10px;
 }
 h4 { text-align: center;
 }
@@ -26,7 +33,8 @@ ul {
   padding-left: 10px;
 }
 .topknot{ padding-left: 250px;
-margin-left: auto;}
+margin-left: auto;
+margin-right: auto;}
 /**************
  Lou CSS above
 *****************/
