@@ -1,11 +1,28 @@
-.PitArea{
+ .PitArea{
+    height:auto;
     width: 320px;
-    margin-left: auto;
-    margin-right: auto;
 }
-.DDonate{
-    width: 320px;
-    height: 240px;
-    margin-right: auto;
-    margin-left: auto;
+
+#donate{ width: 320px;
+    height: 200px;
+    border: none;
+   }
+.coco {
+  
+}  
+
+/* .Cont {
+    max-width: 100%;
+    height: auto;
 }
+
+.Cont img {
+    width: 250px;
+  height: auto;
+  max-width: 50vw;
+}
+*/
+.pups {
+    width: auto;
+  height: auto;
+} 

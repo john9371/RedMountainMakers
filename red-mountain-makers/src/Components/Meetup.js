@@ -11,7 +11,7 @@ class Meetup extends Component {
     }
   }
   componentDidMount() {
-    fetch('https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=RedMountainMakers&page=20',{
+    fetch('https://cryptic-crag.herokuapp.com/api/meetup',{
         mode: 'no-cors',
         method: 'get'
     })
