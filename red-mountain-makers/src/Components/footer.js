@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from '../assets/RMMLogo.png'
-
+import '../css/App.css';
 
 function Footer() {
     return (
@@ -8,7 +8,7 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col l6 s12">
-                        <img src={Image} style={{height:100}}/>
+                        <img src={Image} style={{ height: 100 }} />
                         <p className="#d50000 red-text">Creativity Powered</p>
                     </div>
 
@@ -17,6 +17,9 @@ function Footer() {
                         <ul>
                             <li><a className="#d50000 blue-text" href="https://www.facebook.com/RedMountainMakers/">Facebook</a></li>
                         </ul>
+                    </div>
+                    <div className="col s1 m4">
+                        <iframe className="pups" src="https://www.youtube.com/embed/mCpvIQZth0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
                     </div>
                 </div>
             </div>
