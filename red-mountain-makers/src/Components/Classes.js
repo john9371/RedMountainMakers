@@ -6,7 +6,6 @@ import { Card, Col, Row, Tabs, Tab } from 'react-materialize'
 import Meetup from './Meetup'
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
