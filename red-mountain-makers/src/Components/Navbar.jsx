@@ -8,13 +8,13 @@ function navbar() {
         <div>
             <Navbar className="navbar-fixed black darken-2">
                 <nav className="black darken-2" role="navigation">
-                    <div className="nav-wrapper container"><a id="logo-container" href="http://localhost:3000/" className="brand-logo #d50000 red-text"><img src={Logo} style={{ height: 60 }}></img></a>
+                    <div className="nav-wrapper container"><a id="logo-container" href="http://rmm-i-am-bham.herokuapp.com/" className="brand-logo #d50000 red-text"><img src={Logo} style={{ height: 60 }}></img></a>
                         <ul className="right hide-on-med-and-down">
-                            <li><a className="#d50000 red-text" href="http://localhost:3000/">Home</a></li>
-                            <li><a className="#d50000 red-text" href="http://localhost:3000/Classes">Classes We Offer</a></li>
-                            <li><a className="#d50000 red-text" href="http://localhost:3000/Membership">Membership</a></li>
-                            <li><a className="#d50000 red-text" href="http://localhost:3000/Supporters">Donate</a></li>
-                            <li><a className="#d50000 red-text" href="http://localhost:3000/contact">Contact</a></li>
+                            <li><a className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/">Home</a></li>
+                            <li><a className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Classes">Classes We Offer</a></li>
+                            <li><a className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Membership">Membership</a></li>
+                            <li><a className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Supporters">Donate</a></li>
+                            <li><a className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
