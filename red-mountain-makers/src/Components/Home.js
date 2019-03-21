@@ -33,7 +33,7 @@ export default class Home extends Component {
                 <h6 className="header col s12 light">Our Mission is to provide a collaborative environment that promotes discovery, creativity, and exploration of STEAM (Science, Technology, Engineering, Art, Mathematics) We focus in Education, Entrepreneurship, Recreational Exploration and Open Source. We are a nonprofit makerspace in Birmingham Alabama dedicated to bringing a community together to learn, play, and grow in STEAM areas.</h6>
               </div>
               <div className="row center">
-                <a href="http://localhost:3000/Membership" id="download-button" className="btn-large waves-effect waves-red #000000 black red-text text-darken-2 z-depth-3"><strong>Become a Maker</strong></a>
+                <a href="http://localhost:3000/Membership" id="download-button" className="btn-large waves-effect waves-black #000000 blue black-text text-darken-2 z-depth-3"><strong>Become a Maker</strong></a>
               </div>
               <br /><br />
             </div>

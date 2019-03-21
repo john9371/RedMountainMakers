@@ -7,12 +7,12 @@ var LogoImp = <img src={Logo} style={{ height: 60, paddingLeft: 40 }} />
 function navbar() {
     return (
         <>
-            <Navbar fixed className="nav black" right >
-                <NavItem className="#d50000 red-text" right href="http://rmm-i-am-bham.herokuapp.com/">Home</NavItem>
-                <NavItem className="#d50000 red-text" right href="http://rmm-i-am-bham.herokuapp.com/Classes">Classes We Offer</NavItem>
-                <NavItem className="#d50000 red-text" right href="http://rmm-i-am-bham.herokuapp.com/Membership">Membership</NavItem>
-                <NavItem className="#d50000 red-text" right href="http://rmm-i-am-bham.herokuapp.com/Supporters">Donate</NavItem>
-                <NavItem className="#d50000 red-text" right href="http://rmm-i-am-bham.herokuapp.com/contact">Contact</NavItem>
+            <Navbar fixed className="nav #757575 grey darken-1 " right>
+                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/">Home</NavItem>
+                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Classes">Classes We Offer</NavItem>
+                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Membership">Membership</NavItem>
+                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Supporters">Donate</NavItem>
+                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/contact">Contact</NavItem>
             </Navbar>
         </>
     )
