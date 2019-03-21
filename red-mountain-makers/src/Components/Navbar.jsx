@@ -8,7 +8,7 @@ function navbar() {
         <div>
             <Navbar className="navbar-fixed black darken-2">
                 <nav className="black darken-2" role="navigation">
-                    <div className="nav-wrapper container"><a id="logo-container" href="http://localhost:3000/" className="brand-logo #d50000 red-text"><img src={Logo} style={{ height: 60 }}></img></a>
+                    <div className="nav-wrapper container">
                         <ul className="right hide-on-med-and-down">
                             <li><a className="#d50000 red-text" href="http://localhost:3000/">Home</a></li>
                             <li><a className="#d50000 red-text" href="http://localhost:3000/Classes">Classes We Offer</a></li>
@@ -39,7 +39,6 @@ function navbar() {
                         <li><a className="#d50000 red-text" href="http://localhost:3000/Contact">Contact</a></li>
                     </ul> */}
             </Navbar>
-
         </div>
     )
 }
