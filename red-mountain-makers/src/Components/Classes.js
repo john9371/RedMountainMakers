@@ -61,7 +61,7 @@ class App extends Component {
                         if (v.status = true && index == 0) {
                           return (
                             // <Carousel style={{height: 400}}>
-                            <Tab title={this.state.events[0].name.text} active>
+                            <Tab title={v.name.text} active>
                               <Card className='grey darken-1' textClassName='white-text' actions={[<a href={v.url}>View the event</a>]}>
                                 {v.description.text}
                               </Card>
@@ -73,7 +73,7 @@ class App extends Component {
                         } else if (v.status = true) {
                           return (
                             // <Carousel style={{height: 400}}>
-                            <Tab title={this.state.events[0].name.text}>
+                            <Tab title={v.name.text}>
                               <Card className='grey darken-1' textClassName='white-text' actions={[<a href={v.url}>View the event</a>]}>
                                 {v.description.text}
                               </Card>
