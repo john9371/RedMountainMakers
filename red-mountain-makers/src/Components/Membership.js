@@ -12,7 +12,7 @@ export default class Membership extends Component {
         return (
             <div className="MemberContainer">
                <div className="Title">
-                    Become a Member
+                   <h2>Become a Member</h2> 
                </div>
                <div className="infoContainer">
                     <div className="words">
@@ -27,7 +27,7 @@ export default class Membership extends Component {
                         <img className="photo" src={Glow}/>
                     </div>
                </div>
-               <h2>Full Members must also fulfill the following responsibilities:</h2>
+               <h3>Full Members must also fulfill the following responsibilities:</h3>
                <div className="infoContainer">
                     <div className="words1">
                         A member must thoughtfully contribute to Red Mountain Makers’s direction and
@@ -44,7 +44,7 @@ export default class Membership extends Component {
                <div className="CardContainer">
                <Row>
                 <span class="red-text text-darken-2">
-                    <Col s={12} m={3}>
+                    <Col s={12} m={4}>
                         <Card title="BASIC MAKER"><p>
                             $40/month<br />
                             Access to space during open hours<br />
