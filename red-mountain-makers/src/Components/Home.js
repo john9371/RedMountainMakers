@@ -27,11 +27,12 @@ export default class Home extends Component {
           <div className="section no-pad-bot" id="index-banner">
             <h1 className="center main">RED MOUNTAIN MAKERS</h1>
             <div className="container">
-              <div className="row center">
+              <div className="row center-align">
                 <br /><br /><br /><br /><br /><br />
                 <h3 className="title">Your Local Birmingham Makerspace</h3>
-                <h6 className="header col s12 light">Our Mission is to provide a collaborative environment that promotes discovery, creativity, and exploration of STEAM (Science, Technology, Engineering, Art, Mathematics) We focus in Education, Entrepreneurship, Recreational Exploration and Open Source. We are a nonprofit makerspace in Birmingham Alabama dedicated to bringing a community together to learn, play, and grow in STEAM areas.</h6>
+                <h6 className="header col center-align s12 light" style={{width: '80vw'}}>Our Mission is to provide a collaborative environment that promotes discovery, creativity, and exploration of STEAM (Science, Technology, Engineering, Art, Mathematics) We focus in Education, Entrepreneurship, Recreational Exploration and Open Source. We are a nonprofit makerspace in Birmingham Alabama dedicated to bringing a community together to learn, play, and grow in STEAM areas.</h6>
               </div>
+              <br /><br />
               <div className="row center">
                 <a href="http://rmm-i-am-bham.herokuapp.com/Membership" id="download-button" className="btn-large waves-effect waves-black #000000 blue black-text text-darken-2 z-depth-3"><strong>Become a Maker</strong></a>
               </div>
@@ -131,20 +132,23 @@ export default class Home extends Component {
           </div>
         </div>
         <br /><br /><br />
+    <div className="row center">
+      <h5>Contact Info</h5>
+    </div>
 
         <div className="container">
           <form action="/action_page.php">
-            <label for="fname">Contact Info</label>
+            <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
-            <label for="lname">First Name</label>
+            <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
-            <label for="state">Last Name</label>
+            <label for="state">E-mail</label>
             <input type="text" id="lname" name="E-mail" placeholder="Your e-mail.." />
 
-            <label for="subject">E-mail</label>
-            <textarea id="subject" name="subject" placeholder="Questions, concerns, etc.." style={{ height: "200px" }}></textarea>
+            <label for="subject">Text</label>
+            <textarea id="subject" name="subject" placeholder="Questions, concerns, comments, etc.." style={{ height: "200px" }}></textarea>
           </form>
         </div>
         <div className="row center">
@@ -157,7 +161,3 @@ export default class Home extends Component {
     )
   }
 }
-
-
-
-
