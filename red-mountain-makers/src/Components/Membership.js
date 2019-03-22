@@ -3,7 +3,7 @@ import Glow from '../assets/glow red.jpg'
 import Building from '../assets/building red.jpg'
 import Room from '../assets/classroom.jpg'
 import { Card, Col, Row, Collapsible } from 'react-materialize'
-
+import Style from '../css/membership.css'
 
 
 export default class Membership extends Component {
