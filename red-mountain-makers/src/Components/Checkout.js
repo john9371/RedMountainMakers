@@ -6,7 +6,7 @@ export default class Checkout extends React.Component {
     super(props);
 
     this.state = {
-      dollars: "1",
+      dollars: "0",
       cents: "00"
     }
   }
@@ -18,15 +18,16 @@ export default class Checkout extends React.Component {
     else {
       this.setState({ [value]: e.target.value })
     }
-}
+  }
 
-    onToken = "..."
+  onToken = "..."
 
-    render() {
-      return (
-        <>
-          $<input style={{ width: '50px' }} type="number" name="dollarsToDonate" onChange={this.handleChange.bind(this, 'dollars')} min="0" step="1" ></input>.
-      <input style={{ width: '50px' }} type="number" name="centsToDonate" onChange={this.handleChange.bind(this, 'cents')}></input>
+  render() {
+    return (
+      <>
+        <div style={{ marginTop: '12vh', position: 'absolute', right: '20px' }}>
+          <input style={{ height: '25px', width: '50px', backgroundColor: 'white' }} min="0" type="number" placeholder="0" name="dollarsToDonate" onChange={this.handleChange.bind(this, 'dollars')} min="0" step="1" ></input>.
+          <input style={{ height: '25px', width: '50px', backgroundColor: 'white', marginRight: '5px' }} min="0" placeholder="00" type="number" name="centsToDonate" onChange={this.handleChange.bind(this, 'cents')}></input>
           <StripeCheckout
             amount={this.state.dollars + this.state.cents}
             billingAddress
@@ -38,9 +39,10 @@ export default class Checkout extends React.Component {
             token={this.onToken}
             zipCode
           />
-        </>
-      )
-    }
+        </div>
+      </>
+    )
   }
+}
 
 // export default injectStripe(Checkout);
