@@ -144,7 +144,7 @@ export default class Home extends Component {
                         <input type="text" id="lname" name="E-mail" placeholder="Your e-mail.." />
 
                         <label for="subject">E-mail</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
+                        <textarea id="subject" name="subject" placeholder="Questions, concerns, etc.." style={{ height: "200px" }}></textarea>
                     </form>
        </div>
               <div className="row center">
