@@ -10,6 +10,7 @@ import '../css/membership.css'
 export default class Membership extends Component {
     render() {
         return (
+            <>
             <div className="MemberContainer">
                <div className="Title">
                    <h2>Become a Member</h2> 
@@ -159,7 +160,7 @@ export default class Membership extends Component {
                  </span>
                  </Row>
             </div>
-         </div>
+         </>
              )
          }
      }
