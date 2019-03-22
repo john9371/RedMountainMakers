@@ -86,7 +86,7 @@ export default class Membership extends Component {
                     </span>
                     </Row>
                </div>
-            </div>
+            
             <div className="infoContainer">
                  <div className="words">
                      Come Tour the space! We have open ours Tuesday, Thursday, and Sunday 6:30pm - 9:00pm.
@@ -159,8 +159,13 @@ export default class Membership extends Component {
                  </span>
                  </Row>
             </div>
-        </div>
-         
-            )
-        }
-    }
+         </div>
+             )
+         }
+     }
+
+
+            
+        
+
+

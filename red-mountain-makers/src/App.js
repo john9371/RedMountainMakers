@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Login from './Components/Login'
 import './css/App.css';
 import Supporters from './Components/supportersL'
+import Checkout from './Components/Checkout2'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path="/Membership" component={Membership}/>
               <Route exact path="/Supporters" component={Supporters}/>
               <Route exact path="/Login" component={Login}/>
+              <Route exact path="/Checkout" component={Checkout}/>
               {/* <Route exact path="/Admin" component={Admin}/> */}
             </Switch>
           <Footer /> 
