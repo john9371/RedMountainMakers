@@ -18,10 +18,10 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/admin')
+        fetch('https://red-mountain-makers.herokuapp.com/admin')
             .then(res => res.json())
             .then(dataFromSite => this.setState({ dataARY: dataFromSite }));
-        fetch('http://localhost:5000/users')
+        fetch('https://red-mountain-makers.herokuapp.com/users')
             .then(res => res.json())
             .then(usersFromSite => this.setState({ usersARY: usersFromSite }));
     }
@@ -37,11 +37,8 @@ export default class Home extends Component {
                     {/* </div><ChartFunction data={chartData}/>  */}
                 </div>
                 <div>
-<<<<<<< HEAD
                     <Chart />
-=======
                     {/* <Chart chart.js /> */}
->>>>>>> fd7ae82817b7de0b9ce3c16ed029acb505827ba6
                     <Chart2 />
                 </div>
                 <br></br>

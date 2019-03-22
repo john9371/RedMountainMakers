@@ -18,10 +18,5 @@
   },
   "homepage": "https://github.com/jphn9371/RedMountainMakers#readme",
   "dependencies": {
-    "@types/react-stripe-elements": "^1.1.10",
-    "@types/stripe": "^6.19.8",
-    "react-materialize": "^2.6.0",
-    "react-stripe-elements": "^2.0.3",
-    "stripe": "^6.25.1"
   }
 }

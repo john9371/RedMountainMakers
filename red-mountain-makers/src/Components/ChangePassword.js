@@ -33,7 +33,7 @@ class Login extends Component {
             bcrypt.hash(this.state.password, salt, function (err, hash) {
                 hash = hash.replace(/\//g, "!")
                 console.log(`${hash}`);
-                fetch(`http://172.16.21.56:5000/users/${this.state.email}/${hash}`, { method: 'put', body: 'Updating Password' })
+                fetch(`https://red-mountain-makers.herokuapp.com/users/${this.state.email}/${hash}`, { method: 'put', body: 'Updating Password' })
                     .catch(error => console.log(error));
             }.bind(this));
         }.bind(this));
