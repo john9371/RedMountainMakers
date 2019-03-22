@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Card, Col, Row, Tabs, Tab } from 'react-materialize'
 //import '../css/Classes.css'
 import Meetup from './Meetup'
-
+import back from '../assets/meeting.jpg'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +29,7 @@ class App extends Component {
     if (EventsLive == true) {
       return (
         <div>
-          <div className="banner" style={{ height: '60em' }}>
+          <div className="" style={{ height: '60em', backgroundImage: "url(" + back + ")"}}>
 
             <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%' }}>Classes at the Space</div></h3>
             <div className="container" >
