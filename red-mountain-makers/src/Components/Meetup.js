@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css';
 import { Col, Container, Row, Card } from 'react-materialize'
 import '../css/Classes.css'
-
+const Timestamp = require('react-timestamp');
 class Meetup extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ class Meetup extends Component {
     if (MeetsLive == true) {
       return (
 
-        <div>
+        <>
           {console.log(this.state.events)}
           <h3 className="center-align">Meetups at the Space</h3>
           <Container >
@@ -43,10 +43,12 @@ class Meetup extends Component {
                     if(v.name == "Open Maker Hours" || v.name ==  'Open Maker Hours1'){
                       return null;
                     }else{
+                      var time = v.time
                     console.log(v.event_url);
                       return (<Col s={12} m={6}>
                         <Card className='grey darken-1' textClassName='white-text' title={v.name} actions={[<a href={v.event_url}>View the Meetup</a>]}>
-                          {v.description.slice(3, v.description.length-4)}
+                          {v.description.slice(3, v.description.length-4)}<br />
+                          <Timestamp time={v.time/1000} format='full' includeDay/>
                         </Card>
                       </Col>)
                     }
@@ -56,7 +58,7 @@ class Meetup extends Component {
               </Row>
             </div>
           </Container>
-        </div>
+        </>
       );
     } else {
       return <p>nothing loaded yet</p>
