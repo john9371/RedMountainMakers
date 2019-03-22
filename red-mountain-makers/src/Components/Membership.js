@@ -12,7 +12,7 @@ export default class Membership extends Component {
         return (
             <div className="MemberContainer">
                <div className="Title">
-                   <h2>Become a Member</h2> 
+                   <h2><span className="titlebox">Become a Member</span></h2> 
                </div>
                <div className="infoContainer">
                     <div className="words">
@@ -51,7 +51,7 @@ export default class Membership extends Component {
                             Early Discounts on classes and workshops<br />
                             Eligible for Full Memberships<br />
                             Join Maker community<br /></p>
-                            <Button waves='light' node='a' href='localhost:3000/Checkout/?amount=40'>Join</Button>
+                            <Button waves='red' node='a' href='localhost:3000/Payment/?amount=40'>Join</Button>
                         </Card>
                     </Col>
                 </span>
@@ -66,7 +66,7 @@ export default class Membership extends Component {
                                 Eligibility to submit issues before the board of directors<br />
                                 Eligibility to vote for officers and directors<br />
                                 Eligibility to vote on issues put before the membership</p>
-                                <Button waves='light' node='a' href='localhost:3000/Checkout/?amount=80'>Join</Button>
+                                <Button waves='red' node='a' href='localhost:3000/Payment/?amount=80'>Join</Button>
                             </Card>
                         </Col>
                     </span>
