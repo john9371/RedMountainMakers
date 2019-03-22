@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Glow from '../assets/glow red.jpg'
 import Building from '../assets/building red.jpg'
 import Room from '../assets/classroom.jpg'
-import { Card, Col, Row } from 'react-materialize'
+import { Card, Col, Row, Button } from 'react-materialize'
 import '../css/membership.css'
 
 
@@ -45,18 +45,19 @@ export default class Membership extends Component {
                <Row>
                 <span class="red-text text-darken-2">
                     <Col s={12} m={4}>
-                        <Card title="BASIC MAKER"><p>
+                        <Card title="BASIC MAKER" className="Card"><p>
                             $40/month<br />
                             Access to space during open hours<br />
                             Early Discounts on classes and workshops<br />
                             Eligible for Full Memberships<br />
                             Join Maker community<br /></p>
+                            <Button waves='light' node='a' href='localhost:3000/Checkout/?amount=40'>Join</Button>
                         </Card>
                     </Col>
                 </span>
                     <span class="red-text text-darken-2">
                         <Col s={12} m={4} >
-                            <Card title="FULL MAKER"><p>
+                            <Card title="FULL MAKER" className="Card"><p>
                                 $80/month<br />
                                 24/7 key access to makerspace<br />
                                 Access to space during open hours<br />
@@ -65,12 +66,13 @@ export default class Membership extends Component {
                                 Eligibility to submit issues before the board of directors<br />
                                 Eligibility to vote for officers and directors<br />
                                 Eligibility to vote on issues put before the membership</p>
+                                <Button waves='light' node='a' href='localhost:3000/Checkout/?amount=80'>Join</Button>
                             </Card>
                         </Col>
                     </span>
                     <span class="red-text text-darken-2">
                         <Col s={12} m={4}>
-                            <Card title="MAKER PRO">
+                            <Card title="MAKER PRO" className="Card">
                                 $120/month<br />
                                 Under Construction<br />
                             </Card>
@@ -78,7 +80,7 @@ export default class Membership extends Component {
                     </span>
                     <span class="red-text text-darken-2">
                         <Col s={12} m={4}>
-                            <Card title="MAKER-PANUER">
+                            <Card title="MAKER-PANUER" className="Card">
                                 $210/month<br />
                                 Under Construction<br />
                             </Card>

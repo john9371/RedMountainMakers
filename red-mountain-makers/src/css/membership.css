@@ -124,8 +124,69 @@ h2{
     justify-content: center;
   }
   .photo{
-    height:75%;
-    width:inherit;
+    width:400px;
+    height:300px;
+  }
+  .Card{
+    text-align: center;
+  }
+  h3{
+    text-align: center; 
+    font-weight: bold;
+    padding-bottom: 4%;
+  }
+/* Medium desktop screens */
+  @media only screen and (max-width: 1024px){
+    .infoContainer{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height:100%;
+      width:100%;
+      justify-content: space-between;
+      align-content: space-around;
+      margin-bottom: 2.5%;
+      padding:0 7%;
+    }
+    .words{
+      display: flex;
+      justify-content: left;
+      width:100%;
+      order:1;
+      height:50%;
+      flex-grow: 1;
+      padding:20px 20px;
+      font-size:1.3em;
+    }
+    .Image{
+      display: flex;
+      order:2;
+      flex-grow:1;
+      width:50%;
+      justify-content: center;
+      align-content: center;
+    }
+    .words1{
+      display: flex;
+      justify-content: left;
+      width:100%;
+      order:2;
+      height:50%;
+      padding:20px 20px;
+      font-size:1.3em;
+    }
+    .Image1{
+      display: flex;
+      order:1;
+      flex-grow:1;
+      width:50%;
+      align-content: center;
+      justify-content: center;
+    }
+    .photo{
+      height:75%;
+      width:inherit;
+    }
   }
 }
 
