@@ -12,7 +12,6 @@ function navbar() {
                 <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Classes">Classes We Offer</NavItem>
                 <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Membership">Membership</NavItem>
                 <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/Supporters">Donate</NavItem>
-                <NavItem className="#d50000 red-text" href="http://rmm-i-am-bham.herokuapp.com/contact">Contact</NavItem>
             </Navbar>
         </>
     )
