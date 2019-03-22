@@ -42,19 +42,19 @@ export default class Home extends Component {
         <br /><br /><br /><br /><br /><br /><br /><br />
 
       <div>
-        <div class="row valign-wrapper">
+        <div class="row valign-wrapper" id="nomargin">
           <div className="col s12 m6 l6">
             <h4 className="center black-text">Tech and Engineering</h4>
             <p className="light center black-text" id="focusText">We offer multiple labs and tools for your tech and engineering needs! From Circuits labs to 3D printing labs, members have access to entire host of tools and space at our Makerspace!</p>
           </div>
 
-          <div className="col s12 m6 l6">
+          <div className="col s12 m6 l6" id="nopadding">
             <img className="img responsive-img" src={Image2} />
           </div>
         </div>  
 
-        <div className="row valign-wrapper">
-          <div className="col s12 m6 l6">
+        <div className="row valign-wrapper" id="nomargin">
+          <div className="col s12 m6 l6" id="nopadding">
             <img className="img responsive-img glass" src={Wood} />
           </div>
 
@@ -64,13 +64,13 @@ export default class Home extends Component {
           </div>
         </div>  
 
-        <div className="row valign-wrapper">
+        <div className="row valign-wrapper" id="nomargin">
           <div className="col s12 m6 l6">
             <h4 className="center black-text">Science</h4>
           <p className="light center black-text" id="focusText">We offer multiple labs and tools for your scientific needs! Want to explore plant life, maybe try your hand at brewing. You can at Red Mountain Makers! We offer a biochem science lab for your scientifically inclined curiosity.</p>
           </div>
 
-          <div className="col s12 m6 l6">
+          <div className="col s12 m6 l6" id="nopadding">
             <img className="img responsive-img" src={Plants} />
           </div>
         </div>
@@ -135,13 +135,13 @@ export default class Home extends Component {
         <div className="container">
                     <form action="/action_page.php">
                         <label for="fname">Contact Info</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your first Name.." />
+                        <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
                         <label for="lname">First Name</label>
-                        <input type="text" id="lname" name="firstname" placeholder="Your last name.." />
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
                         <label for="state">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="state.." />
+                        <input type="text" id="lname" name="E-mail" placeholder="Your e-mail.." />
 
                         <label for="subject">E-mail</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
