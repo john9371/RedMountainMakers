@@ -130,7 +130,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <br /><br /><br />
+   <br /><br /><br />
         
         <div className="container">
                     <form action="/action_page.php">
@@ -146,14 +146,13 @@ export default class Home extends Component {
                         <label for="subject">E-mail</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
                     </form>
-                </div>
-                <form>
-                    <label>
-                       <input type="text" name="name" />
-                    </label>
-                   
+       </div>
+              <div className="row center">
+                <form ref="form" onSubmit={this.handleSubmit}>
+                   <button type="submit" style={{}}>Submit</button>
                 </form>
-                <br /><br /><br />
+                </div>
+   <br /><br /><br />
       </>
     )
   }
