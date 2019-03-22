@@ -135,13 +135,13 @@ export default class Home extends Component {
         <div className="container">
                     <form action="/action_page.php">
                         <label for="fname">Contact Info</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your first Name.." />
+                        <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
                         <label for="lname">First Name</label>
-                        <input type="text" id="lname" name="firstname" placeholder="Your last name.." />
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
                         <label for="state">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="state.." />
+                        <input type="text" id="lname" name="E-mail" placeholder="Your e-mail.." />
 
                         <label for="subject">E-mail</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
