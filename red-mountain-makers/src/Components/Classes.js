@@ -29,9 +29,9 @@ class App extends Component {
     if (EventsLive == true) {
       return (
         <div>
-          <div style={{ backgroundImage: "url(" + back + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+          <div style={{ backgroundImage: "url(" + back + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginTop: -100}}>
 
-            <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%' }}>Classes at the Space</div></h3>
+            <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%'}}>Classes at the Space</div></h3>
             <div className="container" >
               <div className="section" >
                 {this.state.events.length == 1 &&
