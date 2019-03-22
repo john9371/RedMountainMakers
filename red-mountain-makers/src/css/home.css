@@ -12,6 +12,7 @@ body {
 
 .title {
     color: white;
+    padding-top: 25%;
 }
 
 .main {
@@ -43,6 +44,7 @@ body {
 
 #download-button {
     border-radius: 50px;
+    border-color: black;
 }
 
 
