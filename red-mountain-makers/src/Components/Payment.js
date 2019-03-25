@@ -3,13 +3,14 @@ import {CardElement, injectStripe} from 'react-stripe-elements';
 import {Button, Row, Col} from 'react-materialize';
 import '../css/PayMe.css'
 
-export default class Payment extends Component{
+class Payment extends Component{
     constructor(props) {
         super(props);
         this.state ={
              complete: false,
              NAME: '',
              EMAIL: '',
+             amount:'',
          };
         this.submit = this.submit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -21,15 +22,24 @@ export default class Payment extends Component{
         })
       }
 
+      componentDidMount(){
+        console.log(this.props);
+        this.setState(amount = this.props.amount)
+      }
+
     async submit(ev) {
         let {token} = await this.props.stripe.createToken({name: "Name"});
-        let response = await fetch("/charge", {
+        console.log(token);
+
+        let response = await fetch(" https://cryptic-crag.herokuapp.com/api/stripe/createcharge", {
           method: "POST",
           headers: {"Content-Type": "text/plain"},
-          body: token.id
+          body: {stripeToken : token.id, amount : this.state.amount, description : "Donation", email : this.state.EMAIL}
         });
-      
-        if (response.ok) console.log("Purchase Complete!")
+
+        if (response.ok) {
+           console.log("Purchase Complete!") 
+        }
       }
 
     render() {
@@ -38,7 +48,7 @@ export default class Payment extends Component{
         return (
             <div className="checkout">
             <h2>Would you like to complete the purchase?</h2>
-            <form >
+            {/* <form > */}
                 <input placeholder="Name" name="NAME" type="text" value={this.state.name} onChange={this.handleChange}/>
                 <input placeholder="Email" name="EMAIL" type="text" value={this.state.email} onChange={this.handleChange}/>
                 <CardElement className="PayMe" style={{
@@ -59,8 +69,10 @@ export default class Payment extends Component{
                  <Button onClick={this.submit} className="payMeButton">Send</Button>
                 </Col>
             </Row>
-            </form>
+            {/* </form> */}
             </div>
         );
     }
 }
+
+export default injectStripe(Payment);
