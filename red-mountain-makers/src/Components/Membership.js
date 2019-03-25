@@ -88,6 +88,7 @@ export default class Membership extends Component {
                     </span>
                     </Row>
                </div>
+            
             </div>
              )
          }
