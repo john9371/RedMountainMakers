@@ -5,7 +5,6 @@ import { Card, Col, Row, Tabs, Tab } from 'react-bootstrap';
 //import '../css/Classes.css'
 import Meetup from './Meetup'
 import back from '../assets/meeting.jpg';
-import Navbar from './Navbar';
 import Footer from './footer';
 
 class App extends Component {
@@ -33,7 +32,6 @@ class App extends Component {
     if (EventsLive == true) {
       return (
         <>
-          <Navbar />
           <div>
             <div style={{ backgroundImage: "url(" + back + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginTop: -100 }}>
 

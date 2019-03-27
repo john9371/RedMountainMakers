@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import { Col, Container, Row, Card } from 'react-materialize'
 import '../css/Classes.css'
-import Navbar from './Navbar';
-import Footer from './footer';
+import { Row, Col, Container, Card } from 'react-bootstrap';
+
 
 
 const Timestamp = require('react-timestamp');
@@ -35,7 +34,6 @@ class Meetup extends Component {
     if (MeetsLive == true) {
       return (
         <>
-          <Navbar />
           <z style={{background: 'white'}}>
             {console.log(this.state.events)}
             <h3 className="center-align">Meetups at the Space</h3>
@@ -83,7 +81,6 @@ class Meetup extends Component {
                 </Row>
             </Container>
           </z>
-          <Footer />
         </>
       );
     } else {

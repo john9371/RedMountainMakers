@@ -14,7 +14,6 @@ import Admin from './Admin'
 //import { request } from 'https';
 //import request from 'request'
 // import { get } from 'http';
-import Navbar from './Navbar';
 import Footer from './footer';
 
 //const ACCESS_TOKEN = 'access_token';
@@ -79,7 +78,6 @@ class Login extends Component {
 
         return (
             <>
-                <Navbar />
                 <div>
                     <form onSubmit={this.handleSubmit.bind(this)}>
                         Email:

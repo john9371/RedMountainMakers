@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import Glow from '../assets/glow red.jpg'
 import Building from '../assets/building red.jpg'
 import Room from '../assets/classroom.jpg'
-import { Card, Col, Row } from 'react-materialize'
 import '../css/membership.css';
-import Navbar from './Navbar';
 import Footer from './footer';
+import { Row, Col, Card } from 'react-bootstrap';
 
 
 
@@ -13,7 +12,6 @@ export default class Membership extends Component {
     render() {
         return (
             <>
-                <Navbar />
                 <div className="MemberContainer">
                     <div className="Title">
                         Become a Member

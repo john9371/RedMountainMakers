@@ -5,10 +5,9 @@ import Molten from '../assets/molten.jpg';
 import Wood from '../assets/wood.jpg';
 import Plants from '../assets/plants.jpg';
 import Chip from '../assets/chip.jpg';
-import { Button, Card, Row, Col } from 'react-materialize';
-import Navbar from './Navbar';
 import '../css/home.css';
 import Footer from './footer';
+import { Row, Col, Button } from 'react-bootstrap';
 
 
 export default class Home extends Component {
@@ -17,7 +16,6 @@ export default class Home extends Component {
 
     return (
       <>
-        <Navbar />
         <div className="banner">
           <Row>
             <Col l={12} m={12} s={12}>

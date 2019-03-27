@@ -11,7 +11,6 @@ import React, { Component } from 'react'
 import bcrypt from 'bcryptjs'
 import { request } from 'https';
 //import request from 'request'
-import Navbar from './Navbar';
 import Footer from './footer';
 
 // import { get } from 'http';
@@ -49,7 +48,7 @@ class Login extends Component {
         return (
 
             <>
-                <Navbar />
+                
                 <div>
                     <form onSubmit={this.handleSubmit.bind(this)}>
                         Email:
