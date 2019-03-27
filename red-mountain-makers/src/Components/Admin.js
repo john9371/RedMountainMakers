@@ -5,7 +5,9 @@ import AllUsersFunction from './Functions/AdminUsers.js'
 import DataFunction from './Functions/dataFunction.js'
 import Chart from './Functions/charts';
 import Chart2 from './Functions/charts2';
-import ChartFunction from './Functions/charts2'
+import ChartFunction from './Functions/charts2';
+import Navbar from './Navbar';
+import Footer from './footer';
 
 export default class Home extends Component {
 
@@ -31,6 +33,7 @@ export default class Home extends Component {
         const data = this.state.dataARY;
         return (
             <>
+                <Navbar />
                 <h1 style={{ textAlign: 'center' }}> ~Admin Page~ </h1>
                 <br></br>
                 <div>
@@ -57,7 +60,7 @@ export default class Home extends Component {
                         </li>
                     })}
                 </ul>
-
+                <Footer />
             </>
 
         );

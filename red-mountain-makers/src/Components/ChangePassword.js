@@ -11,6 +11,8 @@ import React, { Component } from 'react'
 import bcrypt from 'bcryptjs'
 import { request } from 'https';
 //import request from 'request'
+import Navbar from './Navbar';
+import Footer from './footer';
 
 // import { get } from 'http';
 
@@ -45,20 +47,25 @@ class Login extends Component {
 
     render = () => {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    Email:
-                    <input type="text" placeholder="Email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
 
-                    New Password:
-    
-                    <input type="password" placeholder="New Password" value={this.state.password} onChange={this.handleChange.bind(this, 'password')} />
+            <>
+                <Navbar />
+                <div>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        Email:
+                        <input type="text" placeholder="Email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
 
-                    <input type='checkbox' value="Remember me" />
+                        New Password:
+        
+                        <input type="password" placeholder="New Password" value={this.state.password} onChange={this.handleChange.bind(this, 'password')} />
 
-                    <input type="submit" value="Sign in" />
-                </form>
-            </div>
+                        <input type='checkbox' value="Remember me" />
+
+                        <input type="submit" value="Sign in" />
+                    </form>
+                </div>
+                <Footer />
+            </>
         );
     }
 };

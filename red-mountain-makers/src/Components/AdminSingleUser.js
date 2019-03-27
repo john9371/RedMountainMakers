@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SingleUserFunction from './Functions/AdmnSnglUsrFnctn.js';
+import Navbar from './Navbar';
+import Footer from './footer';
 
 export default class user extends Component {
 
@@ -17,15 +19,18 @@ export default class user extends Component {
     }
 
     render() {
+        
         const user = this.state.personARY;
 
         return (
             <>
+                <Navbar />
                 <main>
                     <div>
                         <SingleUserFunction user={user} />
                     </div>
                 </main>
+                <Footer />
             </>
         );
     }

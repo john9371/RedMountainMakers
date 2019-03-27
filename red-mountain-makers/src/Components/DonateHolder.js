@@ -10,6 +10,8 @@ import Pour from '../assets/Pour.jpg'
 import Workshop from '../assets/Workshop.jpg'
 import Banner from '../assets/Banner.png'
 export default class Supporters extends Component {
+  
+  
   render() {
     return (
 

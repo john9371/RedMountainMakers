@@ -13,8 +13,9 @@ import Admin from './Admin'
 //import bcrypt from 'bcryptjs'
 //import { request } from 'https';
 //import request from 'request'
-
 // import { get } from 'http';
+import Navbar from './Navbar';
+import Footer from './footer';
 
 //const ACCESS_TOKEN = 'access_token';
 //const USER_ID = 'user_id';
@@ -77,20 +78,24 @@ class Login extends Component {
         }
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    Email:
+            <>
+                <Navbar />
+                <div>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        Email:
                         <input type="text" placeholder="Email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
 
-                    Password:
-
+                        Password:
+    
                         <input type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange.bind(this, 'password')} />
 
-                    <input type='checkbox' value="Remember me" />
+                        <input type='checkbox' value="Remember me" />
 
-                    <input type="submit" value="Sign in" />
-                </form>
-            </div>
+                        <input type="submit" value="Sign in" />
+                    </form>
+                </div>
+                <Footer />
+            </>
         );
     }
 };

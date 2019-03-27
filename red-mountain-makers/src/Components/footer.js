@@ -18,9 +18,6 @@ function Footer() {
                             <li><a className="#d50000 blue-text" href="https://www.facebook.com/RedMountainMakers/">Facebook</a></li>
                         </ul>
                     </div>
-                    <div className="col s1 m4">
-                        <iframe className="pups" src="https://www.youtube.com/embed/mCpvIQZth0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullscreen></iframe>
-                    </div>
                 </div>
             </div>
         </footer>

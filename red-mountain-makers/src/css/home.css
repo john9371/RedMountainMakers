@@ -10,14 +10,10 @@ body {
 
 }
 
-.title {
-    color: white;
-    padding-top: 25%;
-}
-
-.main {
+.main-text {
     font-family: 'Viga';
-
+    text-align: center;
+    color: white;
 }
 
 .logo {
@@ -36,18 +32,20 @@ body {
     padding-top: 0%;
 }
 
-
-
-.header {
-    color: white;
-}
-
 #download-button {
     border-radius: 50px;
     border-color: black;
 }
 
-
+.top-banner-text {
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+}
+.btm-banner-text {
+    text-align: center;
+    color: white;
+}
 
 .focus {
     text-decoration-line: underline;
@@ -100,10 +98,6 @@ hr {
     border: 2px dashed black;
 }
 
-.glass {
-    margin-right: 0%;
-}
-
 .no-padding {
     padding: 0;
 }
@@ -112,4 +106,6 @@ hr {
     margin-bottom: 0;
 }
 
-
+.home-button {
+    color: 'rgb(249, 15, 28)'
+}

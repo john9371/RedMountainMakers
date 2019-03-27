@@ -1,20 +1,14 @@
 import React, { Component } from 'react'
-
-import Style from '../css/style.css'
-import Image from '../assets/RMMLogo.png'
-import Image2 from '../assets/robots.jpg'
-import Image3 from '../assets/printers.jpg'
-import Image4 from '../assets/molten.jpg'
-import Wrench from '../assets/wrench.jpg'
-import Glass from '../assets/glass.jpg'
-import Molten from '../assets/molten.jpg'
-import Wood from '../assets/wood.jpg'
-import Plants from '../assets/plants.jpg'
-import Chip from '../assets/chip.jpg'
-import Bham from '../assets/bham.jpg'
-
-
-import css from '../css/home.css'
+import Image2 from '../assets/robots.jpg';
+import Image3 from '../assets/printers.jpg';
+import Molten from '../assets/molten.jpg';
+import Wood from '../assets/wood.jpg';
+import Plants from '../assets/plants.jpg';
+import Chip from '../assets/chip.jpg';
+import { Button, Card, Row, Col } from 'react-materialize';
+import Navbar from './Navbar';
+import '../css/home.css';
+import Footer from './footer';
 
 
 export default class Home extends Component {
@@ -23,24 +17,36 @@ export default class Home extends Component {
 
     return (
       <>
+        <Navbar />
         <div className="banner">
-          <div className="section no-pad-bot" id="index-banner">
-            <h1 className="center main">RED MOUNTAIN MAKERS</h1>
-            <div className="container">
-              <div className="row center">
-                <br /><br /><br /><br /><br /><br />
-                <h3 className="title">Your Local Birmingham Makerspace</h3>
-                <h6 className="header col s12 light">Our Mission is to provide a collaborative environment that promotes discovery, creativity, and exploration of STEAM (Science, Technology, Engineering, Art, Mathematics) We focus in Education, Entrepreneurship, Recreational Exploration and Open Source. We are a nonprofit makerspace in Birmingham Alabama dedicated to bringing a community together to learn, play, and grow in STEAM areas.</h6>
-              </div>
-              <div className="row center">
-                <a href="http://localhost:3000/Membership" id="download-button" className="btn-large waves-effect waves-black #000000 blue black-text text-darken-2 z-depth-3"><strong>Become a Maker</strong></a>
-              </div>
-              <br /><br />
-            </div>
-          </div>
+          <Row>
+            <Col l={12} m={12} s={12}>
+              <h1 className="main-text">RED MOUNTAIN MAKERS</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col l={12} m={12} s={12}>
+              <h3 className="top-banner-text">Your Local Birmingham Makerspace</h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col l={12}>
+              <h6 className="btm-banner-text text-white">Our Mission is to provide a collaborative environment that promotes discovery, creativity, and exploration of STEAM (Science, Technology, Engineering, Art, Mathematics) We focus in Education, Entrepreneurship, Recreational Exploration and Open Source. We are a nonprofit makerspace in Birmingham Alabama dedicated to bringing a community together to learn, play, and grow in STEAM areas.</h6>
+            </Col>
+          </Row>
+          <Row>
+            <Col l={12} m={12} s={12} style={{ justifyContent: 'center', display: 'flex' }}>
+              <Button
+                className="btn-primary"
+                style={{ width: 175 }}
+                waves='light'
+                node='a'
+                href='http://localhost:3000/Membership'>
+                Become a Maker
+                </Button>
+            </Col>
+          </Row>
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br />
-
         <div>
           <div class="row valign-wrapper" id="nomargin">
             <div className="col s12 m6 l6">
@@ -55,7 +61,7 @@ export default class Home extends Component {
 
           <div className="row valign-wrapper" id="nomargin">
             <div className="col s12 m6 l6" id="nopadding">
-              <img className="img responsive-img glass" src={Wood} />
+              <img className="img responsive-img" src={Wood} />
             </div>
 
             <div className="col s12 m6 l6">
@@ -117,20 +123,20 @@ export default class Home extends Component {
             </div>
             <div className="row">
               <div className="pics">
-                <div className="col s1 m4" id="nopadding">
+                <div className="col s4 m4" id="nopadding">
                   <img className="img responsive-img" src={Image3} />
                 </div>
-                <div className="col s1 m4" id="nopadding">
+                <div className="col s4 m4" id="nopadding">
                   <img className="img responsive-img" src={Chip} />
                 </div>
-                <div className="col s1 m4" id="nopadding">
+                <div className="col s4 m4" id="nopadding">
                   <img className="img responsive-img" src={Molten} />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <br /><br /><br />
+        <br /> <br /> <br />
 
         <div className="container">
           <form action="/action_page.php">
@@ -152,7 +158,8 @@ export default class Home extends Component {
             <button type="submit" style={{}}>Submit</button>
           </form>
         </div>
-        <br /><br /><br />
+        <br /> <br /> <br />
+        <Footer />
       </>
     )
   }

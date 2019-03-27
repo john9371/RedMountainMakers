@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import Image from '../assets/RMMLogo.png'
+import Image from '../assets/RMMLogo.png';
+import Footer from './footer';
+
+
 export default class Checkout extends React.Component {
   constructor(props) {
     super(props);
