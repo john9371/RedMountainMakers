@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image, Row, Col, Form, Button } from 'react-bootstrap';
-import '../scss/donate.css'
+import '../scss/main.css'
 import Logo from "../assets/RMMLogo.png"
 
 
@@ -52,25 +52,9 @@ export default class Donate extends Component {
                         <Row className="no-margin">
                             <Form>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email" />
-                                    <Form.Text className="text-muted">
-                                        We'll never share your email with anyone else.
-                                    </Form.Text>
+                                    <Form.Control type="number" min={0} placeholder="Other" />
                                 </Form.Group>
-
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicChecbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
-                                </Form.Group>
-                                <Button variant="primary" type="submit">
-                                    Submit
-                                </Button>
                             </Form>
-                            {/* <i className="fas fa-dollar-sign"></i> */}
                         </Row>
                         <Row>
                             <Col s={12} m={12} l={12}>

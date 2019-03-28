@@ -7,7 +7,6 @@ import Admin from './Components/Admin';
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Login from './Components/Login';
 import './css/App.css';
-import Supporters from './Components/supportersL';
 import Donate from './Components/Donate';
 
 
@@ -21,7 +20,6 @@ class App extends Component {
             <Route exact path="/Classes" component={Classes} />
             <Route exact path="/Membership" component={Membership} />
             <Route exact path="/Donate" component={Donate} />
-            <Route exact path="/Supporters" component={Supporters} />
             <Route exact path="/Login" component={Login} />
             {/* <Route exact path="/Admin" component={Admin}/> */}
           </Switch>

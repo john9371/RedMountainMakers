@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Card, Col, Row, Tabs, Tab } from 'react-bootstrap';
 //import '../css/Classes.css'
 import Meetup from './Meetup'
-import back from '../assets/meeting.jpg';
 import Footer from './footer';
 
 class App extends Component {
@@ -33,7 +32,7 @@ class App extends Component {
       return (
         <>
           <div>
-            <div style={{ backgroundImage: "url(" + back + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginTop: -100 }}>
+            <div style={{ backgroundColor: "red", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginTop: -100 }}>
 
               <h3 className="valign-wrapper" style={{ height: '5em' }}><div className="center-align" style={{ width: '100%' }}>Classes at the Space</div></h3>
               <div className="container" >

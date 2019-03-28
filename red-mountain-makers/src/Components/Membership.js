@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import Glow from '../assets/glow red.jpg'
-import Building from '../assets/building red.jpg'
-import Room from '../assets/classroom.jpg'
 import '../css/membership.css';
 import Footer from './footer';
 import { Row, Col, Card } from 'react-bootstrap';
@@ -26,7 +23,7 @@ export default class Membership extends Component {
                             become a Full Maker Membership.
                  </div>
                         <div className="Image">
-                            <img className="photo" src={Glow} />
+                            <img className="photo" src="" alt="needs new image" />
                         </div>
                     </div>
                     <h2>Full Members must also fulfill the following responsibilities:</h2>
@@ -40,7 +37,7 @@ export default class Membership extends Component {
                             directors for this purpose.
                  </div>
                         <div className="Image1">
-                            <img className="photo" src={Building} />
+                            <img className="photo" src="#" alt="needs new image" />
                         </div>
                     </div>
                     <div className="CardContainer">
