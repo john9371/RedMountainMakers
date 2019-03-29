@@ -29,40 +29,44 @@ export default class Donate extends Component {
                         </Row>
                         <Row>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button}>$10</Button>
+                                <Button style={styles.button}>$10</Button>
                             </Col>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button}>$25</Button>
+                                <Button style={styles.button}>$25</Button>
                             </Col>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button}>$50</Button>
+                                <Button style={styles.button}>$50</Button>
                             </Col>
                         </Row>
                         <Row>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button} >$100</Button>
+                                <Button style={styles.button} >$100</Button>
                             </Col>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button}>$250</Button>
+                                <Button style={styles.button}>$250</Button>
                             </Col>
                             <Col s={4} m={4} l={4} className="less-padding zero-padding">
-                                <Button waves="red" style={styles.button}>$500</Button>
+                                <Button style={styles.button}>$500</Button>
                             </Col>
                         </Row>
                         <Row className="no-margin">
-                            <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Control type="number" min={0} placeholder="Other" />
-                                </Form.Group>
-                            </Form>
+                            <div className="mx-auto">
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Control type="number" min={0} placeholder="Other" />
+                                    </Form.Group>
+                                </Form>
+                            </div>
                         </Row>
                         <Row>
                             <Col s={12} m={12} l={12}>
                                 <Button waves="red" style={styles.button}>Donate</Button>
                             </Col>
                         </Row>
-                        <div style={{ display: "flex", justifyContent: "center" }}>
-                            <Image href="http://localhost:3000/" src={Logo} className="logo" />
+                        <div>
+                            <a href="http://localhost:3000/" style={{ display: "flex", justifyContent: "center" }}>
+                                <Image src={Logo} className="logo" />
+                            </a>
                         </div>
 
                     </div>

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-// import '../css/App.css';
 // import '../css/materialize.css'
 import { Card, Col, Row, Tabs, Tab } from 'react-bootstrap';
 //import '../css/Classes.css'
 import Meetup from './Meetup'
-import Footer from './footer';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {

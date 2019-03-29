@@ -1,27 +1,19 @@
-import React from 'react'
-import Image from '../assets/RMMLogo.png'
-import '../css/App.css';
+import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
-function Footer() {
-    return (
-        <footer className="page-footer black darken-2">
-            <div className="container">
-                <div className="row">
-                    <div className="col l6 s12">
-                        <img src={Image} style={{ height: 100 }} />
-                        <p className="#d50000 red-text">Creativity Powered</p>
-                    </div>
 
-                    <div className="col l3 s12">
-                        <h5 className="#d50000 red-text">Connect with us!</h5>
-                        <ul>
-                            <li><a className="#d50000 blue-text" href="https://www.facebook.com/RedMountainMakers/">Facebook</a></li>
-                        </ul>
+
+
+export default class Footer extends Component {
+    render() {
+        return (
+            <Row className="mb-0">
+                <Col>
+                    <div className="footer bg-dark">
                     </div>
-                </div>
-            </div>
-        </footer>
-    )
+                </Col>
+            </Row>
+        )
+    }
 }
 
-export default Footer;

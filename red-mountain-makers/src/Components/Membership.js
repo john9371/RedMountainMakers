@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import '../css/membership.css';
-import Footer from './footer';
+import Footer from './Footer';
 import { Row, Col, Card } from 'react-bootstrap';
 
 

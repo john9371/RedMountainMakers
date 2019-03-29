@@ -6,8 +6,11 @@ import Admin from './Components/Admin';
 // import Supporters from './'
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Login from './Components/Login';
-import './css/App.css';
 import Donate from './Components/Donate';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLaptopCode, faCubes, faFlask, faBoxOpen, faBook, faTools } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faLaptopCode, faCubes, faFlask, faBoxOpen, faBook, faTools)
 
 
 class App extends Component {

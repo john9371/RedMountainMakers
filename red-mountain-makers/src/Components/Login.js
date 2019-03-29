@@ -14,7 +14,7 @@ import Admin from './Admin'
 //import { request } from 'https';
 //import request from 'request'
 // import { get } from 'http';
-import Footer from './footer';
+import Footer from './Footer';
 
 //const ACCESS_TOKEN = 'access_token';
 //const USER_ID = 'user_id';

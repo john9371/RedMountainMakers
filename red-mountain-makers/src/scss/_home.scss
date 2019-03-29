@@ -1,34 +1,49 @@
 body {
-    font-family: 'Arvo', serif;
+    font-family: 'Viga';
 }
 
-.main-text {
-    font-family: 'Viga';
+.banner-title {    
     text-align: center;
-    color: white;
+    margin-top: 10vh;
+    text-shadow:
+		-1px -1px 0 #333231,
+		1px -1px 0 #333231,
+		-1px 1px 0 #333231,
+		1px 1px 0 #333231;
 }
 
 .banner {
     background-image: url("../assets/home-banner.jpg");
-    max-width:100%;
-    max-height:100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    margin-top: 0%;
-    padding-top: 0%;
 }
 
-.top-banner-text {
-    margin-top: 20%;
+.banner-text {
+    margin-top: 50vh;
     text-align: center;
-    color: white;
+    text-shadow:
+		-1px -1px 0 #333231,
+		1px -1px 0 #333231,
+		-1px 1px 0 #333231,
+		1px 1px 0 #333231;
 }
-.btm-banner-text {
-    text-align: center;
-    color: white;
+
+.banner-btn {
+    width: 18em;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
+.scrollbar-hidden {
+    overflow-x: hidden;
+}
 
+.about {
+    height: 100%;
+}
 
+.limit-width {
+    max-width: 100%;
+}
