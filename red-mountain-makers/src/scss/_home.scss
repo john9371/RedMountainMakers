@@ -4,7 +4,7 @@ body {
 
 .banner-title {    
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     text-shadow:
 		-1px -1px 0 #333231,
 		1px -1px 0 #333231,
@@ -21,7 +21,7 @@ body {
 }
 
 .banner-text {
-    margin-top: 50vh;
+    margin-top: 45vh;
     text-align: center;
     text-shadow:
 		-1px -1px 0 #333231,
@@ -46,4 +46,15 @@ body {
 
 .limit-width {
     max-width: 100%;
+}
+
+.push {
+    padding-top: 245px;
+    background-color: #333231;
+    transition: .35s;
+}
+
+.pull {
+    transition: .35s;
+    background-color: #333231;
 }

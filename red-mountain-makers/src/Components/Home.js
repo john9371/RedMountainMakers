@@ -1,42 +1,67 @@
 import React, { Component } from 'react';
 import '../scss/main.scss';
-import { Row, Col, Button, Container, ButtonToolbar } from 'react-bootstrap';
+import { Row, Col, Button, Container, ButtonToolbar, Image, Nav, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import TheNavbar from './Navbar.js';
-import Footer from './Footer.js'
+import Footer from './Footer.js';
+import Logo from '../assets/RMMLogo.png'
 
 
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleClass = this.toggleClass.bind(this);
+    this.state = {
+      active: false,
+    };
+  }
+  toggleClass() {
+    this.setState({ active: !this.state.active });
+  };
+
   render() {
     return (
 
       <>
-        <TheNavbar />
-        <Container fluid className="p-0 m-0 scrollbar-hidden">
-          <div className="banner limit-width">
-            <Row className="m-0">
-              <Col>
-                <h1 className="banner-title text-light">RED MOUNTAIN MAKERS</h1>
-              </Col>
-            </Row>
-            <Row className="m-0">
-              <Col >
-                <h2 className="banner-text text-light">Try Something New<br />Build Something Great</h2>
-              </Col>
-            </Row>
-            <Row className="m-0">
-              <Col style={{ justifyContent: 'center', display: 'flex' }}>
-                <ButtonToolbar>
-                  <Button
-                    className="banner-btn"
-                    variant='outline-light'
-                    href='http://localhost:3000/Membership'>
-                    Become a Maker
-                  </Button>
-                </ButtonToolbar>
-              </Col>
-            </Row>
+        <Navbar collapseOnSelect bg="dark" variant="dark" expand="md" onToggle={this.toggleClass}>
+          <div>
+            <Navbar.Brand href="http://localhost:3000"><Image id="brand" className="d-flex" src={Logo} style={{ height: "auto", width: "3em" }}></Image></Navbar.Brand>
+          </div>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" id="navbarIcon" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link className="text-primary mr-3" href="http://localhost:3000">Home</Nav.Link>
+              <Nav.Link className="text-primary mr-3" href="http://localhost:3000/Classes">Classes</Nav.Link>
+              <Nav.Link className="text-primary mr-3" href="http://localhost:3000/Donate">Donate</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <Container fluid className='p-0 m-0 scrollbar-hidden'>
+          <div className={this.state.active ? 'push' : 'pull'}>
+            <div className="banner limit-width">
+              <Row className="m-0">
+                <Col>
+                  <h1 className="banner-title text-light">RED MOUNTAIN MAKERS</h1>
+                </Col>
+              </Row>
+              <Row className="m-0">
+                <Col >
+                  <h2 className="banner-text text-light">Try Something New<br />Build Something Great</h2>
+                </Col>
+              </Row>
+              <Row className="m-0">
+                <Col style={{ justifyContent: 'center', display: 'flex' }}>
+                  <ButtonToolbar>
+                    <Button
+                      className="banner-btn"
+                      variant='outline-light'
+                      href='http://localhost:3000/Membership'>
+                      Become a Maker
+                    </Button>
+                  </ButtonToolbar>
+                </Col>
+              </Row>
+            </div>
           </div>
           <Row className="m-0">
             <div className="bg-light m-0" style={{ width: "100%" }}>
@@ -181,7 +206,6 @@ export default class Home extends Component {
               </Col>
             </Row>
           </div>
-          <Footer />
         </Container>
       </>
     )

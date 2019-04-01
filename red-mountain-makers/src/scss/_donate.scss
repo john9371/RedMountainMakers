@@ -5,14 +5,47 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
-@media screen and (min-width: 1025px) {
+
+@media screen and (min-width: 1280px) {
     .box-header {
     margin: 0;
     font-size: 4vw;
     }
     .mission {
         margin: 0;
-        font-size: 1vw
+        font-size: 1vw;
+    }
+    .box {
+    position: absolute;
+    top: 5vh;
+    bottom: 5vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 90vh;
+    width: 33.3333vw;
+    background-color: white;
+    border-radius: 10px;
+    }
+    .call-to-action {
+        text-align: center;
+        font-size: 2vw;
+    }
+    .logo {
+        height: auto;
+        width: 15%;
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .box-header {
+    margin: 0;
+    font-size: 4vw;
+    }
+    .mission {
+        margin: 0;
+        font-size: 1vw;
     }
     .box {
     position: absolute;
@@ -130,10 +163,19 @@ input[type=number]:not(.browser-default):focus:not([readonly]) {
     box-shadow: none;
 }
 
-.input-field .prefix.active {
-    color: #000;
-  }
+#inactive {
+    width: 100%;
+    background-color: #D3D3D3;
+    color: black;
+    transition: .5s
+}
 
+#selected {
+    width: 100%;
+    background-color: #CD3A42;
+    color: white;
+    transition: .5s;
+}
 
 
 

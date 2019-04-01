@@ -10569,7 +10569,40 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1280px) {
+  .box-header {
+    margin: 0;
+    font-size: 4vw;
+  }
+  .mission {
+    margin: 0;
+    font-size: 1vw;
+  }
+  .box {
+    position: absolute;
+    top: 5vh;
+    bottom: 5vh;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 90vh;
+    width: 33.3333vw;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .call-to-action {
+    text-align: center;
+    font-size: 2vw;
+  }
+  .logo {
+    height: auto;
+    width: 15%;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
   .box-header {
     margin: 0;
     font-size: 4vw;
@@ -10698,8 +10731,20 @@ input[type=number]:not(.browser-default):focus:not([readonly]) {
           box-shadow: none;
 }
 
-.input-field .prefix.active {
-  color: #000;
+#inactive {
+  width: 100%;
+  background-color: #D3D3D3;
+  color: black;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#selected {
+  width: 100%;
+  background-color: #CD3A42;
+  color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 body {
@@ -10708,8 +10753,8 @@ body {
 
 .banner-title {
   text-align: center;
-  margin-top: 10vh;
-  text-shadow: -1px -1px 0 #333231, 1px -1px 0 #333231, -1px 1px 0 #333231, 1px 1px 0 #333231;
+  margin-top: 5vh;
+  text-shadow: -1px -1px 0 #333231, 1px -1px 0 #333231, -1px 1px 0 #333231, 1px 1px 0 #333231;
 }
 
 .banner {
@@ -10721,9 +10766,9 @@ body {
 }
 
 .banner-text {
-  margin-top: 50vh;
+  margin-top: 45vh;
   text-align: center;
-  text-shadow: -1px -1px 0 #333231, 1px -1px 0 #333231, -1px 1px 0 #333231, 1px 1px 0 #333231;
+  text-shadow: -1px -1px 0 #333231, 1px -1px 0 #333231, -1px 1px 0 #333231, 1px 1px 0 #333231;
 }
 
 .banner-btn {
@@ -10742,6 +10787,19 @@ body {
 
 .limit-width {
   max-width: 100%;
+}
+
+.push {
+  padding-top: 245px;
+  background-color: #333231;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.pull {
+  -webkit-transition: .35s;
+  transition: .35s;
+  background-color: #333231;
 }
 
 .footer {
@@ -10769,7 +10827,7 @@ body {
   }
 }
 
-.show {
-  background-color: #333231;
+.nav-link {
+  font-size: 1.25em;
 }
 /*# sourceMappingURL=main.css.map */
